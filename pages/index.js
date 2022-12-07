@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+
 import Navbar from '../components/Navbar';
 
 export default function Home() {
@@ -13,12 +13,7 @@ export default function Home() {
 
       <Navbar />
 
-      <div className="hero">
-        <img src='https://cdn.dribbble.com/users/1106561/screenshots/14929262/media/375ea073850823cc5ec9f7784916ef2e.jpg?compress=1&resize=1600x1200&vertical=top' />
-      </div>
-
-      <footer className='home-footer'>
-      </footer>
+      
     </div>
   )
 }
