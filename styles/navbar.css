@@ -3,9 +3,9 @@
     font-weight: bold;
     display: flex;
     justify-content: space-between;
-    margin: 1rem 1rem;
+    margin: 2rem 2rem;
     padding: 1rem 1rem;
-    width: 100%;
+    max-width: 100%;
 }
 
 .navbar-right {
@@ -15,4 +15,8 @@
 
 .navbar-right h1 {
     margin: auto 1rem;
+}
+
+.navbar-link {
+    text-decoration: none;
 }
