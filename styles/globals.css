@@ -3,7 +3,10 @@
    License: none (public domain)
 */
 
+@import url(index.css);
 @import url(navbar.css);
+@import url(hero.css);
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -51,9 +54,25 @@ table {
 	border-spacing: 0;
 }
 
+/* Adding Fonts */
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Bold.otf');
+  font-weight: bold;
+}
+
 @font-face {
   font-family: 'Gotham';
   src: url('../fonts/Gotham-Black.otf');
-  font-weight: normal;
-  font-style: normal;
+  font-weight: bolder;
 }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Light.otf');
+  font-weight: normal;
+}
+
+
+
