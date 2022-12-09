@@ -1,5 +1,6 @@
 import React from 'react';
 import Typed from 'typed.js';
+import Emoji from './Emoji';
 import { useRef } from 'react';
 
 const TypedText = () => {
@@ -34,7 +35,8 @@ const TypedText = () => {
         return (
             <div className="wrap">
                 
-                <h1 className='animation-text'>Hey There!</h1>
+
+                <h1 className='animation-text'>Hey There! <Emoji symbol="👋" label="sheep"/></h1>
                 <div className="type-wrap">
                     <span style={{ whiteSpace: 'pre' }} ref={el} />
                 </div>
