@@ -30,7 +30,7 @@ const TypedText = () => {
 
         return (
             <div className="wrap">
-                <h1>Hey There!</h1>
+                <h1 className='animation-text'>Hey There!</h1>
     
                 <div className="type-wrap">
                     <span style={{ whiteSpace: 'pre' }} ref={el} />
