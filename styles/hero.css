@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 4rem auto;
+    padding: 4rem auto;
 }
 
 .hero-left {
@@ -17,7 +18,8 @@
 .hero-body-text {
     font-family: 'Gotham';
     font-weight: normal;
-    margin: 2rem 8rem;
+    margin: auto 8rem;
+    margin-top: 2rem;
     line-height: 1.5rem;
 }
   

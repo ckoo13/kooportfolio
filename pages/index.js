@@ -3,6 +3,11 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import WorkIcon from '@mui/icons-material/Work';
+
 export default function Home() {
   return (
     <div className='home-container'>
@@ -14,6 +19,12 @@ export default function Home() {
 
       <Navbar />
       <Hero />
+
+      <div className="social-icons-container">
+        <LinkedInIcon className='social-icon'></LinkedInIcon>
+        <GitHubIcon className='social-icon'></GitHubIcon>
+        <WorkIcon className='social-icon'></WorkIcon>
+      </div>
     </div>
   )
 }
