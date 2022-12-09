@@ -13,4 +13,11 @@
     width: 300px;
     margin-right: 6rem;
 }
+
+.hero-body-text {
+    font-family: 'Gotham';
+    font-weight: normal;
+    margin: 2rem 8rem;
+    line-height: 1.5rem;
+}
   

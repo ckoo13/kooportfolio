@@ -71,9 +71,16 @@ table {
 
 @font-face {
   font-family: 'Gotham';
-  src: url('../fonts/Gotham-Light.otf');
+  src: url('../fonts/GothamBook.ttf');
   font-weight: normal;
 }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Light.otf');
+  font-weight: lighter;
+}
+
 
 
 
