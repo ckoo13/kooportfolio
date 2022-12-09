@@ -10,14 +10,15 @@ const TypedText = () => {
     React.useEffect(() => {
         const options = {
             strings: [
-                'Calvin Koo',
-                'a software engineer',
-                'a product manager',
-                'happy you are here!'
+                'I am Calvin Koo',
+                'I am a software engineer',
+                'I am a product manager',
+                'I am happy you are here!'
             ],
             typeSpeed: 70,
             backSpeed: 30,
-            loop: true
+            loop: true,
+            smartBackspace: true
         }
 
         // elRef refers to the <span> rendered below
@@ -32,8 +33,8 @@ const TypedText = () => {
 
         return (
             <div className="wrap">
-                <h1 className='animation-text'>Hey There! I am </h1>
-    
+                
+                <h1 className='animation-text'>Hey There!</h1>
                 <div className="type-wrap">
                     <span style={{ whiteSpace: 'pre' }} ref={el} />
                 </div>
