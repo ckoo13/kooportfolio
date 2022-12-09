@@ -21,9 +21,15 @@ export default function Home() {
       <Hero />
 
       <div className="social-icons-container">
-        <LinkedInIcon className='social-icon'></LinkedInIcon>
-        <GitHubIcon className='social-icon'></GitHubIcon>
-        <WorkIcon className='social-icon'></WorkIcon>
+        <a href="https://www.linkedin.com/in/calvin-koo-9aa869158/" target='_blank'>
+          <LinkedInIcon className='social-icon'></LinkedInIcon>
+        </a>
+        <a href="https://github.com/ckoo13" target='_blank'>
+          <GitHubIcon className='social-icon'></GitHubIcon>
+        </a>
+        <a href="https://angel.co/u/kyung-koo" target='_blank'>
+          <WorkIcon className='social-icon'></WorkIcon>
+        </a>
       </div>
     </div>
   )
