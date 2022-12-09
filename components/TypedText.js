@@ -15,7 +15,9 @@ const TypedText = () => {
                 'a product manager',
                 'happy you are here!'
             ],
-            typeSpeed: 70
+            typeSpeed: 70,
+            backSpeed: 30,
+            loop: true
         }
 
         // elRef refers to the <span> rendered below
@@ -30,7 +32,7 @@ const TypedText = () => {
 
         return (
             <div className="wrap">
-                <h1 className='animation-text'>Hey There!</h1>
+                <h1 className='animation-text'>Hey There! I am </h1>
     
                 <div className="type-wrap">
                     <span style={{ whiteSpace: 'pre' }} ref={el} />

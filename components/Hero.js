@@ -9,7 +9,7 @@ export default function Hero() {
                 <TypedText />
             </div>
             <div className="hero-right">
-                <img src="/memoji.png" alt="" className="navbar-img" />
+                <img src="/memoji.png" alt="" className="hero-img" />
             </div>
         </div>
     )
