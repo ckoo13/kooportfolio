@@ -3,6 +3,8 @@ import Typed from 'typed.js';
 import Emoji from './Emoji';
 import { useRef } from 'react';
 
+import { Box, Text } from '@chakra-ui/react';
+
 const TypedText = () => {
     const el = React.useRef(null);
 
@@ -33,14 +35,12 @@ const TypedText = () => {
         }, [])
 
         return (
-            <div className="wrap">
-                
-
-                <h1 className='animation-text'>Hey There! <Emoji symbol="👋" label="sheep"/></h1>
+            <Box fontFamily='Gotham' fontWeight='bold' fontSize={32} marginX={40} className="wrap">
+                <Text className='animation-text'>Hey There! <Emoji symbol="👋" label="sheep"/></Text>
                 <div className="type-wrap">
                     <span style={{ whiteSpace: 'pre' }} ref={el} />
                 </div>
-            </div>
+            </Box>
         )
 };
 

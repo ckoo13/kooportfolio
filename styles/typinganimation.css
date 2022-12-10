@@ -19,13 +19,6 @@
     animation: 0;
   }
 
-.wrap {
-    font-family: 'Gotham';
-    font-weight: bold;
-    font-size: 3em;
-    margin: auto 8rem;
-}
-
 .animation-text {
     margin: 0.5rem auto;
 }
