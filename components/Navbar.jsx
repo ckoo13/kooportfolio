@@ -2,9 +2,22 @@ import React from 'react';
 import Link from 'next/link';
 
 import { Box, Flex, Text, Button, useColorMode } from '@chakra-ui/react';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 export default function Navbar() {
     const {colorMode, toggleColorMode} = useColorMode();
+
+    const toggleButton = () => {
+        if (colorMode === 'light') {
+            return (
+                <MoonIcon/>
+            )
+        } else {
+            return (
+                <SunIcon/>
+            )
+        }
+    }
 
     return (
         <Flex align='center' justify='space-between' width='85%' mt='10' >
@@ -24,7 +37,9 @@ export default function Navbar() {
                     <Text marginX={4}>About</Text>
                 </Link>
                 <Text marginX={4}>Resume</Text>
-                <Button onClick={toggleColorMode} marginX={4}></Button>
+                <Button onClick={toggleColorMode} marginX={4}>
+                    {toggleButton()}
+                </Button>
             </Flex>
         </Flex>
     )
