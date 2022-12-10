@@ -1,6 +1,11 @@
 @import url(index.css);
-@import url(hero.css);
 @import url(typinganimation.css);
+
+.social-icon {
+  font-size: 3rem;
+  margin: auto 1rem;
+  cursor: pointer;
+}
 
 /* Adding Fonts */
 
