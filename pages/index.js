@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
+import Hero from '../components/Hero'
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';

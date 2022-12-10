@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 
+import { Container, Box, Flex } from '@chakra-ui/react';
 
 export default function Navbar() {
     return (
-        <div className='navbar-container'>
+        <Flex align='center'>
             <div className="navbar-left">
             <Link className="navbar-link navbar-name" href='/' >
                     <h1 className="navbar-link">Calvin Koo</h1>
@@ -22,6 +23,6 @@ export default function Navbar() {
                 </Link>
                 <h1 className="navbar-link">Resume</h1>
             </div>
-        </div>
+        </Flex>
     )
 }
