@@ -1,28 +1,28 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { Container, Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 
 export default function Navbar() {
     return (
-        <Flex align='center'>
-            <div className="navbar-left">
-            <Link className="navbar-link navbar-name" href='/' >
-                    <h1 className="navbar-link">Calvin Koo</h1>
+        <Flex align='center' justify='space-between' width='85%' mt='10' >
+            <Box fontFamily='Gotham' fontWeight='bold'>
+                <Link className="navbar-link navbar-name" href='/' >
+                        <h1 className="navbar-link">Calvin Koo</h1>
                 </Link>
-            </div>
-            <div className="navbar-right">
+            </Box>
+            <Flex justifyContent='space-between'>
                 <Link className="navbar-link" href='/' >
-                    <h1 className="navbar-link">Home</h1>
+                    <Text marginX={4}>Home</Text>
                 </Link>
                 <Link className="navbar-link" href='/playground'>
-                    <h1 className="navbar-link">Playground</h1>
+                    <Text marginX={4}>Playground</Text>
                 </Link>
                 <Link className="navbar-link" href='/about'>
-                    <h1 className="navbar-link">About</h1>
+                    <Text marginX={4}>About</Text>
                 </Link>
-                <h1 className="navbar-link">Resume</h1>
-            </div>
+                    <Text marginX={4}>Resume</Text>
+            </Flex>
         </Flex>
     )
 }
