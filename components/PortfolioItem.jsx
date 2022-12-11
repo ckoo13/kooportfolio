@@ -23,7 +23,7 @@ export default function PortfolioItem({project}) {
                 <Text>{description}</Text>
             </Box>
 
-            <Image width='600px' objectFit='cover' src='/teetimes.png'></Image>
+            <Image width='600px' objectFit='cover' src='https://ckoodev.s3.us-west-1.amazonaws.com/modalgifs/teetimesgif.gif'></Image>
         </Flex>
     )
 }
