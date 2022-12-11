@@ -8,9 +8,14 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WorkIcon from '@mui/icons-material/Work';
 
+import { TeeTimes } from '../utils/portfolioitems';
+
 import { Flex, Box, Link } from '@chakra-ui/react';
 
+
+
 export default function Home() {
+
   return (
     <Flex flexDirection='column' alignItems='center'>
       <Head>
@@ -34,7 +39,7 @@ export default function Home() {
         </Link>
       </Box>
 
-      <PortfolioItem />
+      <PortfolioItem project={TeeTimes} />
     </Flex>
   )
 }
