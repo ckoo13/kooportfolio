@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero'
+import PortfolioItem from '../components/PortfolioItem';
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -33,7 +34,7 @@ export default function Home() {
         </Link>
       </Box>
 
-      
+      <PortfolioItem />
     </Flex>
   )
 }
