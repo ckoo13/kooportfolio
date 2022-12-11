@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import MobileNavbar from './MobileNavbar';
 
 import { Box, Flex, Text, Button, useColorMode } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
@@ -26,7 +27,7 @@ export default function Navbar() {
                         <h1 className="navbar-link">Calvin Koo</h1>
                 </Link>
             </Box>
-            <Flex justifyContent='space-between' alignItems='center'>
+            <Flex display={{base:'none', md:'flex', lg:'flex'}} justifyContent='space-between' alignItems='center'>
                 <Link className="navbar-link" href='/' >
                     <Text marginX={4}>Home</Text>
                 </Link>
@@ -41,6 +42,7 @@ export default function Navbar() {
                     {toggleButton()}
                 </Button>
             </Flex>
+            <MobileNavbar />
         </Flex>
     )
 }
