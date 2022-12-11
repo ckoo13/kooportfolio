@@ -21,7 +21,7 @@ export default function Navbar() {
 
     return (
         <Flex align='center' justify='space-between' width='85%' mt='10' >
-            <Box fontFamily='Gotham' fontWeight='bold' fontSize={28}>
+            <Box fontFamily='Gotham' fontWeight='bold' fontSize={{base:'20px', md:'20px', lg:'24px'}}>
                 <Link className="navbar-link navbar-name" href='/' >
                         <h1 className="navbar-link">Calvin Koo</h1>
                 </Link>
