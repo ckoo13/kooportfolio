@@ -7,7 +7,7 @@ import { Box, Text, Flex, Image } from '@chakra-ui/react';
 export default function Hero() {
 
     return (
-        <Flex justifyContent='space-between' alignItems='center' marginY={20} flexDirection={{base: 'column', md:'row', lg:'row'}} >
+        <Flex justifyContent='space-between' alignItems='center' marginY={{base:'10', md:'20', lg:'20'}} flexDirection={{base: 'column', md:'row', lg:'row'}} >
             <Box width='65%' >
                 <TypedText />
 
