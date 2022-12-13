@@ -1,6 +1,8 @@
 import React from 'react';
-import { Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent, Button, DrawerCloseButton} from '@chakra-ui/react';
+import { Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent, Button, DrawerCloseButton, Text} from '@chakra-ui/react';
+import { VStack } from '@chakra-ui/react';
 import { useDisclosure } from '@chakra-ui/react';
+import Link from 'next/link';
 
 
 export default function MobileNavbar() {
@@ -8,7 +10,14 @@ export default function MobileNavbar() {
     const btnRef = React.useRef();
 
     const navigationItems = () => {
-        
+        const itemList = ['Home', 'Playground', 'About', 'Resume']
+
+        itemList.map(item => {
+            return (
+                <Link href={`/`}>
+                </Link>
+            )
+        })
     }
 
     return (
@@ -27,7 +36,12 @@ export default function MobileNavbar() {
                     <DrawerCloseButton/>
                     <DrawerHeader>Menu</DrawerHeader>
                     <DrawerBody>
-                        
+                        <VStack>
+                            <Link href='/'>Home</Link>
+                            <Link href='/playground'>Playground</Link>
+                            <Link href='/about'>About</Link>
+                            <Text>Resume</Text>
+                        </VStack>
                     </DrawerBody>
                 </DrawerContent>
             </Drawer>
