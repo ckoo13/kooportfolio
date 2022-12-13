@@ -32,6 +32,11 @@
   font-weight: lighter;
 }
 
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-BookItalic.otf');
+  font-style: italic;
+}
 
 
 

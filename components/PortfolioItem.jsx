@@ -1,4 +1,4 @@
-import { Box, Image, Text, Flex} from '@chakra-ui/react';
+import { Box, Image, Text, Flex, Button} from '@chakra-ui/react';
 import React from 'react';
 import { useState, useEffect } from 'react';
 
@@ -17,13 +17,16 @@ export default function PortfolioItem({project}) {
     })
 
     return (
-        <Flex flexDirection={{base:'column', md:'row', lg:'row'}} justifyContent='space-between' width='100%' >
-            <Box textAlign='center' marginX={{base:'10', md:'20', lg:'20'}} >
-                <Text fontSize={{base:'32px', md:'40px', lg:'40px'}}>{title}</Text>
+        <Flex bgColor='tomato' flexDirection={{base:'column', md:'row', lg:'row'}} alignItems={{base:'center', md:'center', lg:'center'}} width='100%'>
+            <Flex textAlign='center' flexDirection='column' gap='5' marginX={{base:'10', md:'10', lg:'20'}} marginBottom={{base:'10', md:'10', lg:'20'}} justifyContent='center'>
+                <Text fontSize={{base:'32px', md:'40px', lg:'40px'}} fontWeight='bolder'>{title}</Text>
+                <Text fontStyle='italic'>{projectType}</Text>
                 <Text>{description}</Text>
-            </Box>
+                {/* need to add on click event for view project button */}
+                <Button>View Project</Button>
+            </Flex>
 
-            <Image width={{base:'100%', md:'50%', lg:'50%'}} objectFit='cover' marginX={{base:'10', md:'20', lg:'20'}} src='/teetimes.png'></Image>
+            <Image width={{base:'100%', md:'50%', lg:'50%'}}  marginX={{base:'0', md:'20', lg:'20'}} src='/teetimes.png'></Image>
         </Flex>
     )
 }
