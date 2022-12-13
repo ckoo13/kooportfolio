@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero'
 import PortfolioItem from '../components/PortfolioItem';
+import Emoji from '../components/Emoji';
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -10,7 +11,7 @@ import WorkIcon from '@mui/icons-material/Work';
 
 import { TeeTimes } from '../utils/portfolioitems';
 
-import { Flex, Box, Link } from '@chakra-ui/react';
+import { Flex, Box, Link, Text } from '@chakra-ui/react';
 
 
 
@@ -38,6 +39,8 @@ export default function Home() {
           <WorkIcon className='social-icon'></WorkIcon>
         </Link>
       </Box>
+
+      <Text fontWeight='bold' marginBottom={{base:'2em', md:'3em', lg:'4em'}} fontSize={{base:'24px', md:'28px', lg:'28px'}} >Check out my portfolio <Emoji symbol="⬇️"/></Text>
 
       <PortfolioItem project={TeeTimes} />
     </Flex>
