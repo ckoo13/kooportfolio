@@ -11,7 +11,7 @@ export const Kooflix = {
 }
 
 export const VeloLaunch = {
-    title: 'Velo Launch',
+    title: 'VeloLaunch',
     description: 'A data visualization built using the D3 library and VanillaJS for avid baseball fans to further explore the popular launch angle debate.',
     projectType: 'Data Visualization Web Application'
 }

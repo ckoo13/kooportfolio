@@ -16,6 +16,14 @@ export default function PortfolioItem({project}) {
         setProjectType(project.projectType);
     })
 
+    const projectImage = () => {
+        const src = `/${title}.png`;
+
+        return (
+            <Image cursor='pointer' boxShadow='lg' width={{base:'100%', md:'50%', lg:'50%'}} padding={{base:'5', md:'5', lg:'5'}}  marginX={{base:'0', md:'20', lg:'20'}} src={src}></Image>
+        )
+    }
+
     return (
         <Flex flexDirection={{base:'column', md:'row', lg:'row'}} alignItems={{base:'center', md:'center', lg:'center'}} width='100%'>
             <Flex textAlign='center' flexDirection='column' gap='5' marginX={{base:'10', md:'10', lg:'20'}}>
@@ -26,7 +34,7 @@ export default function PortfolioItem({project}) {
                 <Button>View Project</Button>
             </Flex>
 
-            <Image cursor='pointer' boxShadow='lg' width={{base:'100%', md:'50%', lg:'50%'}} padding={{base:'0', md:'5', lg:'5'}}  marginX={{base:'0', md:'20', lg:'20'}} src='/teetimes.png'></Image>
+            {projectImage()}
         </Flex>
     )
 }
