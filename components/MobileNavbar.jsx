@@ -24,7 +24,7 @@ export default function MobileNavbar() {
     return (
         <>
             <Button display={{base:'block', md:'none', lg:'none'}} ref={btnRef} onClick={onOpen}>
-                Open
+                <HamburgerIcon/>
             </Button>
             <Drawer
                 isOpen={isOpen}
