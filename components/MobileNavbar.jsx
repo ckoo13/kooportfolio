@@ -3,6 +3,7 @@ import { Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerCo
 import { VStack } from '@chakra-ui/react';
 import { useDisclosure } from '@chakra-ui/react';
 import Link from 'next/link';
+import { HamburgerIcon } from '@chakra-ui/icons';
 
 
 export default function MobileNavbar() {
@@ -30,13 +31,13 @@ export default function MobileNavbar() {
                 placement='right'
                 onClose={onClose}
                 finalFocusRef={btnRef}
+                size='full'
             >
                 <DrawerOverlay/>
                 <DrawerContent>
                     <DrawerCloseButton/>
-                    <DrawerHeader>Menu</DrawerHeader>
                     <DrawerBody>
-                        <VStack>
+                        <VStack alignItems='center'>
                             <Link href='/'>Home</Link>
                             <Link href='/playground'>Playground</Link>
                             <Link href='/about'>About</Link>
