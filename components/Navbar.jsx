@@ -37,7 +37,9 @@ export default function Navbar() {
                 <Link className="navbar-link" href='/about'>
                     <Text marginX={4}>About</Text>
                 </Link>
-                <Text marginX={4}>Resume</Text>
+                <a href="/resume.pdf" target='_blank'>
+                    <Text marginX={4}>Resume</Text>
+                </a>
                 <Button onClick={toggleColorMode} marginX={4}>
                     {toggleButton()}
                 </Button>
