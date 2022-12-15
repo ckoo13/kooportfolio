@@ -40,7 +40,7 @@ export default function Home() {
         </Link>
       </Box>
 
-      <Text fontWeight='bold' marginBottom={{base:'2em', md:'3em', lg:'4em'}} fontSize={{base:'24px', md:'28px', lg:'28px'}} >Check out my portfolio <Emoji symbol="⬇️"/></Text>
+      <Text fontWeight='bold' marginBottom={{base:'2em', md:'2em', lg:'3em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}} >Check out my portfolio <Emoji symbol="⬇️"/></Text>
 
       <VStack spacing={10}>
         <PortfolioItem project={TeeTimes} />
