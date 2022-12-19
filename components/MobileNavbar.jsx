@@ -15,7 +15,7 @@ export default function MobileNavbar() {
 
         itemList.map(item => {
             return (
-                <Link href={`/`}>
+                <Link key={item} href={`/`}>
                 </Link>
             )
         })

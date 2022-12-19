@@ -16,7 +16,7 @@ export default function ExperienceItem({item}) {
         setRole(item.role);
         setDuration(item.duration);
         setDescriptions(item.descriptions);
-    });
+    }, []);
 
     return (
         <Stack spacing={{base:2, md:3, lg:3}}>
@@ -25,7 +25,7 @@ export default function ExperienceItem({item}) {
             <UnorderedList spacing={{base:1, md:1, lg:1}}>
                 {descriptions.map(item => {
                     return (
-                        <ListItem>{item}</ListItem>
+                        <ListItem key={item}>{item}</ListItem>
                     )
                 })}
             </UnorderedList>

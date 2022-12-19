@@ -58,11 +58,11 @@ export default function Home() {
 
       <Tabs size='sm' isFitted variant='enclosed'>
         <TabList>
-          <Tab><Image borderRadius='50%' width={{base: '25%', md:'25%', lg:'25%'}} src='/alphasights.jpeg'></Image></Tab>
-          <Tab><Image width={{base: '30%', md:'30%', lg:'30%'}}  src='/coda.png'></Image></Tab>
-          <Tab><Image width={{base: '25%', md:'25%', lg:'25%'}}  src='/jump.png'></Image></Tab>
-          <Tab><Image width={{base: '25%', md:'25%', lg:'25%'}}  src='/claremontmckenna.png'></Image></Tab>
-          <Tab><Image width={{base: '50%', md:'50%', lg:'50%'}}  src='/appacademy.svg'></Image></Tab>
+          <Tab><Image borderRadius='50%' width={{base: '25%', md:'25%', lg:'25%'}} src='/alphasights.jpeg' alt='image not loaded'></Image></Tab>
+          <Tab><Image width={{base: '30%', md:'30%', lg:'30%'}}  src='/coda.png' alt='image not loaded'></Image></Tab>
+          <Tab><Image width={{base: '25%', md:'25%', lg:'25%'}}  src='/jump.png' alt='image not loaded'></Image></Tab>
+          <Tab><Image width={{base: '25%', md:'25%', lg:'25%'}}  src='/claremontmckenna.png' alt='image not loaded'></Image></Tab>
+          <Tab><Image width={{base: '50%', md:'50%', lg:'50%'}}  src='/appacademy.svg' alt='image not loaded'></Image></Tab>
         </TabList>
 
         <TabPanels>
@@ -89,7 +89,7 @@ export default function Home() {
       <VStack spacing={3} marginBottom='2em'>
         <Text fontWeight='bold' marginTop={{base:'2em', md:'2em', lg:'3em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}} >Contact</Text>
         <Text textAlign='center' width='50%'>I am currently seeking full-time software engineering opportunities. Please contact me if you have such opportunities or if you are interested in working with me.</Text>
-        <Button w='40%'><a href='mailto:kkoo22@students.claremontmckenna.edu' target='_blank'>Say Hello</a></Button>
+        <Button w='40%'><a href='mailto:kkoo22@students.claremontmckenna.edu' target='_blank' rel="noreferrer">Say Hello</a></Button>
       </VStack>
 
     </Flex>
