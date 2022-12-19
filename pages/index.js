@@ -11,7 +11,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import WorkIcon from '@mui/icons-material/Work';
 
 import { TeeTimes, Kooflix, VeloLaunch } from '../utils/portfolioitems';
-import { AlphaSights, Coda, JUMP } from '../utils/experience';
+import { AlphaSights, AppAcademy, CMC, Coda, JUMP } from '../utils/experience';
 
 import { Flex, Box, Link, Text, VStack, Image } from '@chakra-ui/react';
 import { Tab, TabList, TabPanels, Tabs, TabPanel } from "@chakra-ui/react";
@@ -54,13 +54,15 @@ export default function Home() {
       </VStack>
 
       {/* Experience Section */}
-      <Text fontWeight='bold' marginTop={{base:'2em', md:'2em', lg:'3em'}} marginBottom={{base:'2em', md:'2em', lg:'2em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}} >Work Experience</Text>
+      <Text fontWeight='bold' marginTop={{base:'2em', md:'2em', lg:'3em'}} marginBottom={{base:'2em', md:'2em', lg:'2em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}} >Experience</Text>
 
       <Tabs size='sm' isFitted variant='enclosed'>
         <TabList>
           <Tab><Image borderRadius='50%' width={{base: '25%', md:'25%', lg:'25%'}} src='/alphasights.jpeg'></Image></Tab>
           <Tab><Image width={{base: '30%', md:'30%', lg:'30%'}}  src='/coda.png'></Image></Tab>
           <Tab><Image width={{base: '25%', md:'25%', lg:'25%'}}  src='/jump.png'></Image></Tab>
+          <Tab><Image width={{base: '25%', md:'25%', lg:'25%'}}  src='/claremontmckenna.png'></Image></Tab>
+          <Tab><Image width={{base: '50%', md:'50%', lg:'50%'}}  src='/appacademy.svg'></Image></Tab>
         </TabList>
 
         <TabPanels>
@@ -72,6 +74,12 @@ export default function Home() {
             </TabPanel>
             <TabPanel>
               <ExperienceItem item={JUMP} />
+            </TabPanel>
+            <TabPanel>
+              <ExperienceItem item={CMC} />
+            </TabPanel>
+            <TabPanel>
+              <ExperienceItem item={AppAcademy} />
             </TabPanel>
           </TabPanels>
 

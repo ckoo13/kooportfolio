@@ -25,3 +25,20 @@ export const JUMP = {
                     'Formulated 6 business development projects to increase revenue, create marketing strategies, and source suppliers resulting in 2 successful partnerships for portfolio companies']
 };
 
+export const CMC = {
+    role: 'Student',
+    company: 'Claremont McKenna College',
+    duration: 'Sep 2018 - Dec 2022',
+    descriptions: ['Bachelor of Arts in Economics and Asian Studies',
+                    'Relevant Coursework: Intro to Computer Science, Intro to Data Science in Python, Econometrics, Discrete Math, Statistics',
+                    'Phi Alpha Theta Honors Society']
+};
+
+export const AppAcademy = {
+    role: 'Student',
+    company: 'App Academy',
+    duration: 'May 2022 - Sep 2022',
+    descriptions: ['1000+ hour 12-week fully immersive full stack web development bootcamp',
+                    'Created full stack clone of popular streaming application Netflix',
+                    'Focus on Ruby on Rails, React/Redux, MongoDB, Express.js, Node..js']
+}
