@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-import { UnorderedList, ListItem, Box, Text, Heading } from "@chakra-ui/react";
+import { UnorderedList, ListItem, Stack, Text, Heading } from "@chakra-ui/react";
 
 
 
@@ -19,16 +19,16 @@ export default function ExperienceItem({item}) {
     });
 
     return (
-        <Box>
-            <Heading>{role} @ {name}</Heading>
-            <Text>{duration}</Text>
-            <UnorderedList>
+        <Stack spacing={{base:2, md:3, lg:3}}>
+            <Heading size={{base:'sm', md:'md', lg:'md'}} >{role} @ {name}</Heading>
+            <Text fontStyle='italic'>{duration}</Text>
+            <UnorderedList spacing={{base:1, md:1, lg:1}}>
                 {descriptions.map(item => {
                     return (
                         <ListItem>{item}</ListItem>
                     )
                 })}
             </UnorderedList>
-        </Box>
+        </Stack>
     )
 }
