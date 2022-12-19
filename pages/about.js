@@ -9,6 +9,8 @@ export default function About() {
     return (
         <Flex flexDirection='column' alignItems='center' >
             <Navbar />
+
+            Under construction!
         </Flex>
     )
 }

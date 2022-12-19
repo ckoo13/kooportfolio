@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero'
@@ -13,7 +13,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import { TeeTimes, Kooflix, VeloLaunch } from '../utils/portfolioitems';
 import { AlphaSights, AppAcademy, CMC, Coda, JUMP } from '../utils/experience';
 
-import { Flex, Box, Link, Text, VStack, Image } from '@chakra-ui/react';
+import { Flex, Box, Link, Text, VStack, Image, Button} from '@chakra-ui/react';
 import { Tab, TabList, TabPanels, Tabs, TabPanel } from "@chakra-ui/react";
 
 
@@ -54,7 +54,7 @@ export default function Home() {
       </VStack>
 
       {/* Experience Section */}
-      <Text fontWeight='bold' marginTop={{base:'2em', md:'2em', lg:'3em'}} marginBottom={{base:'2em', md:'2em', lg:'2em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}} >Experience</Text>
+      <Text fontWeight='bold' marginTop={{base:'2em', md:'2em', lg:'3em'}} marginBottom={{base:'1em', md:'1em', lg:'1em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}} >Experience</Text>
 
       <Tabs size='sm' isFitted variant='enclosed'>
         <TabList>
@@ -84,6 +84,16 @@ export default function Home() {
           </TabPanels>
 
       </Tabs>
+
+      {/* Contact Section */}
+      <VStack spacing={3} marginBottom='2em'>
+        <Text fontWeight='bold' marginTop={{base:'2em', md:'2em', lg:'3em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}} >Contact</Text>
+        <Text textAlign='center' width='50%'>I am currently seeking full-time software engineering opportunities. Please contact me if you have such opportunities or if you are interested in working with me.</Text>
+        <Button w='40%'><a href='mailto:kkoo22@students.claremontmckenna.edu' target='_blank'>Say Hello</a></Button>
+      </VStack>
+
     </Flex>
+
+    
   )
 }

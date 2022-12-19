@@ -8,6 +8,8 @@ export default function Playground() {
     return (
         <Flex flexDirection='column' alignItems='center' >
             <Navbar />
+
+            Under construction!
         </Flex>
     )
 }
