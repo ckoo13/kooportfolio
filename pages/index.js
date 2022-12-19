@@ -11,8 +11,9 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import WorkIcon from '@mui/icons-material/Work';
 
 import { TeeTimes, Kooflix, VeloLaunch } from '../utils/portfolioitems';
+import { AlphSights, Coda, JUMP } from '../utils/experience';
 
-import { Flex, Box, Link, Text, VStack } from '@chakra-ui/react';
+import { Flex, Box, Link, Text, VStack, Image } from '@chakra-ui/react';
 import { Tab, TabList, TabPanels, Tabs, TabPanel } from "@chakra-ui/react";
 
 
@@ -55,12 +56,24 @@ export default function Home() {
       {/* Experience Section */}
       <Text fontWeight='bold' marginTop={{base:'2em', md:'2em', lg:'3em'}} marginBottom={{base:'2em', md:'2em', lg:'3em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}} >Work Experience</Text>
 
-      <Tabs isFitted variant='enclosed'>
+      <Tabs size='sm' isFitted variant='enclosed'>
         <TabList>
-          <Tab>AlphaSights</Tab>
-          <Tab>Coda</Tab>
-          <Tab>JUMP Investors</Tab>
+          <Tab><Image width={{base: '25%', md:'25%', lg:'25%'}} src='/alphasights.jpeg'></Image></Tab>
+          <Tab><Image width={{base: '30%', md:'30%', lg:'30%'}}  src='/coda.png'></Image></Tab>
+          <Tab><Image width={{base: '25%', md:'25%', lg:'25%'}}  src='/jump.png'></Image></Tab>
         </TabList>
+
+        <TabPanels>
+            <TabPanel>
+              <ExperienceItem item={AlphaSights} />
+            </TabPanel>
+            <TabPanel>
+
+            </TabPanel>
+            <TabPanel>
+
+            </TabPanel>
+          </TabPanels>
 
       </Tabs>
     </Flex>
