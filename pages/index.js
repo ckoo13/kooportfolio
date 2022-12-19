@@ -58,7 +58,7 @@ export default function Home() {
 
       <Tabs size='sm' isFitted variant='enclosed'>
         <TabList>
-          <Tab><Image width={{base: '25%', md:'25%', lg:'25%'}} src='/alphasights.jpeg'></Image></Tab>
+          <Tab><Image borderRadius='50%' width={{base: '25%', md:'25%', lg:'25%'}} src='/alphasights.jpeg'></Image></Tab>
           <Tab><Image width={{base: '30%', md:'30%', lg:'30%'}}  src='/coda.png'></Image></Tab>
           <Tab><Image width={{base: '25%', md:'25%', lg:'25%'}}  src='/jump.png'></Image></Tab>
         </TabList>

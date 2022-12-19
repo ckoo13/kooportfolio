@@ -1,7 +1,7 @@
 export const AlphaSights = {
-    role: 'Summer Associate',
+    role: 'Associate',
     company: 'AlphaSights',
-    duration: 'May 2021 - Aug 2021',
+    duration: 'Jan 2022 - Present',
     descriptions: ['Executed primary market research for PE & VC firms across deal lifecycle', 
                     'Synthesized key market insights and information into deliverables from clients setting a monthly record pace for client deliverables resulting in 152% revenue growth for the firm',
                     'Achieved 55% YoY account growth capturing an increasing share of wallet for both clients in Q2 of 2021']
