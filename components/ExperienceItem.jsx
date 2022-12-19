@@ -1,9 +1,17 @@
 import React from "react";
 
-export default function ExperienceItem() {
+import { Tab, TabList, TabPanels, Tabs, TabPanel } from "@chakra-ui/react";
+
+import { UnorderedList, ListItem } from "@chakra-ui/react";
+
+
+
+export default function ExperienceItem({company}) {
+    
+
     return (
-        <Flex>
-            
-        </Flex>
+        <UnorderedList>
+
+        </UnorderedList>
     )
 }

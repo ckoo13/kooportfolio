@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero'
 import PortfolioItem from '../components/PortfolioItem';
 import Emoji from '../components/Emoji';
+import ExperienceItem from '../components/ExperienceItem';
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -12,6 +13,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import { TeeTimes, Kooflix, VeloLaunch } from '../utils/portfolioitems';
 
 import { Flex, Box, Link, Text, VStack } from '@chakra-ui/react';
+import { Tab, TabList, TabPanels, Tabs, TabPanel } from "@chakra-ui/react";
 
 
 
@@ -40,6 +42,8 @@ export default function Home() {
         </Link>
       </Box>
 
+      {/* Portfolio Section */}
+
       <Text fontWeight='bold' marginBottom={{base:'2em', md:'2em', lg:'3em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}} >Check out my portfolio <Emoji symbol="⬇️"/></Text>
 
       <VStack spacing={10}>
@@ -47,6 +51,18 @@ export default function Home() {
         <PortfolioItem project={Kooflix}/>
         <PortfolioItem project={VeloLaunch}/>
       </VStack>
+
+      {/* Experience Section */}
+      <Text fontWeight='bold' marginTop={{base:'2em', md:'2em', lg:'3em'}} marginBottom={{base:'2em', md:'2em', lg:'3em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}} >Work Experience</Text>
+
+      <Tabs isFitted variant='enclosed'>
+        <TabList>
+          <Tab>AlphaSights</Tab>
+          <Tab>Coda</Tab>
+          <Tab>JUMP Investors</Tab>
+        </TabList>
+
+      </Tabs>
     </Flex>
   )
 }
