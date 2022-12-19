@@ -1,4 +1,4 @@
-const AlphaSights = {
+export const AlphaSights = {
     role: 'Summer Associate',
     company: 'AlphaSights',
     duration: 'May 2021 - Aug 2021',
@@ -7,7 +7,7 @@ const AlphaSights = {
     
 };
 
-const Coda = {
+export const Coda = {
     role: 'Growth Fellow',
     company: 'Coda',
     duration: 'Feb 2022 - May 2022',
@@ -16,7 +16,7 @@ const Coda = {
                     'Worked directly with the Coda Growth/Go-To-Market Team to ideate and implement growth strategies across campuses.']
 };
 
-const JUMP = {
+export const JUMP = {
     role: 'Venture Capital Intern',
     company: 'JUMP Investors',
     duration: 'May 2020 - Aug 2020',
