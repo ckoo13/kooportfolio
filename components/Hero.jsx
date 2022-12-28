@@ -4,7 +4,8 @@ import TypedText from './TypedText';
 import { Box, Text, Flex, Image } from '@chakra-ui/react';
 
 
-export default function Hero() {
+export default function Hero({props}) {
+    
 
     return (
         <Flex justifyContent='space-between' alignItems='center' marginY={{base:'0', md:'20', lg:'20'}} marginTop={{base:'10'}} flexDirection={{base: 'column', md:'row', lg:'row'}} >
