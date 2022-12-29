@@ -22,7 +22,7 @@ export default function ExperienceItem({item}) {
         <Stack spacing={{base:2, md:3, lg:3}}>
             <Heading size={{base:'sm', md:'md', lg:'md'}} >{role} @ {name}</Heading>
             <Text fontStyle='italic'>{duration}</Text>
-            <UnorderedList spacing={{base:1, md:1, lg:1}}>
+            <UnorderedList paddingX={{base:'1em'}} spacing={{base:1, md:1, lg:1}}>
                 {descriptions.map(item => {
                     return (
                         <ListItem key={item}>{item}</ListItem>
