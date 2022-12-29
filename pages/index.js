@@ -13,7 +13,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import { TeeTimes, Kooflix, VeloLaunch } from '../utils/portfolioitems';
 import { AlphaSights, AppAcademy, CMC, Coda, JUMP } from '../utils/experience';
 
-import { Flex, Box, Link, Text, VStack, Image, Button} from '@chakra-ui/react';
+import { Flex, Link, Text, VStack, Image, Button, HStack} from '@chakra-ui/react';
 import { Tab, TabList, TabPanels, Tabs, TabPanel } from "@chakra-ui/react";
 
 
@@ -31,17 +31,17 @@ export default function Home() {
       <Navbar />
       <Hero />
 
-      <Box fontSize='20px' marginBottom={{base:'20', md:'50', lg:'100'}} marginTop={{base:'0', md:'0', lg:'10'}}>
+      <HStack spacing={{base:'3', md:'3', lg:'5'}} marginBottom={{base:'20', md:'50', lg:'100'}} marginTop={{base:'0', md:'0', lg:'10'}}>
         <Link href="https://www.linkedin.com/in/calvin-koo-9aa869158/" target='_blank'>
-          <LinkedInIcon className='social-icon'></LinkedInIcon>
+          <LinkedInIcon sx={{ fontSize: "40px" }}></LinkedInIcon>
         </Link>
         <Link href="https://github.com/ckoo13" target='_blank'>
-          <GitHubIcon className='social-icon'></GitHubIcon>
+          <GitHubIcon sx={{ fontSize: "40px" }} ></GitHubIcon>
         </Link>
         <Link href="https://angel.co/u/kyung-koo" target='_blank'>
-          <WorkIcon className='social-icon'></WorkIcon>
+          <WorkIcon sx={{ fontSize: "40px" }}></WorkIcon>
         </Link>
-      </Box>
+      </HStack>
 
       {/* Portfolio Section */}
 
