@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
 import Navbar from "../components/Navbar";
 
@@ -6,6 +7,14 @@ import { Box, Flex, Image, Text, Stack } from "@chakra-ui/react";
 
 
 export default function About() {
+
+    const fetchTopTracks = async () => {
+        const response = await fetch("/api/top-tracks");
+        const data = await response.json();
+
+        console.log(data);
+    }
+    
     return (
         <Flex flexDirection='column' alignItems='center'>
             <Navbar />
@@ -24,4 +33,4 @@ export default function About() {
             </Flex>
         </Flex>
     )
-}
+};
