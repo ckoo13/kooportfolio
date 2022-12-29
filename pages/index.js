@@ -31,7 +31,7 @@ export default function Home() {
       <Navbar />
       <Hero />
 
-      <Box marginBottom={{base:'20', md:'50', lg:'100'}} marginTop={{base:'0', md:'0', lg:'10'}}>
+      <Box fontSize='20px' marginBottom={{base:'20', md:'50', lg:'100'}} marginTop={{base:'0', md:'0', lg:'10'}}>
         <Link href="https://www.linkedin.com/in/calvin-koo-9aa869158/" target='_blank'>
           <LinkedInIcon className='social-icon'></LinkedInIcon>
         </Link>
