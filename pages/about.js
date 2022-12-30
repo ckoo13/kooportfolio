@@ -24,7 +24,7 @@ export default function About() {
         <Flex flexDirection='column' alignItems='center'>
             <Navbar />
 
-            <Flex flexDirection={{base:'column', md:'row', lg:'row'}} alignItems='center' justifyContent='space-between' width='100%' marginY={{base:'10', md:'20', lg:'20'}}>
+            <Flex paddingY={{base:'10', md:'20', lg:'20'}} flexDirection={{base:'column', md:'row', lg:'row'}} alignItems='center' justifyContent='space-between' width='100%'>
                 <Image marginLeft={{base:'0', md:'10', lg:'20'}} borderRadius='12px' marginBottom={{base:'10', md:'0', lg:'0'}} boxSize={{base: '250px', md:'250px', lg:'300px'}} objectFit="cover" src="/about.jpg"></Image>
 
                 <Box width='60%' marginRight={{base:'0', md:'10', lg:'20'}}>
