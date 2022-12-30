@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 import Navbar from "../components/Navbar";
+import AudioPlayer from "../components/AudioPlayer";
 
 import { Box, Flex, Image, Text, Stack } from "@chakra-ui/react";
 
@@ -36,6 +37,8 @@ export default function About() {
                     </Stack>
                 </Box>
             </Flex>
+
+            <AudioPlayer tracks={tracks} />
         </Flex>
     )
 };
