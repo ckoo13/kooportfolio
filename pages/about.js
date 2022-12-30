@@ -7,12 +7,17 @@ import { Box, Flex, Image, Text, Stack } from "@chakra-ui/react";
 
 
 export default function About() {
+    const [tracks, setTracks] = useState({});
+
+    useEffect(() => {
+        fetchTopTracks();
+    }, [])
 
     const fetchTopTracks = async () => {
         const response = await fetch("/api/top-tracks");
         const data = await response.json();
 
-        console.log(data);
+        setTracks(data);
     }
     
     return (
