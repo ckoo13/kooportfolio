@@ -7,7 +7,7 @@ import { Box, Flex, Image, Text, Stack } from "@chakra-ui/react";
 
 
 export default function About() {
-    const [tracks, setTracks] = useState({});
+    const [tracks, setTracks] = useState([]);
 
     useEffect(() => {
         fetchTopTracks();

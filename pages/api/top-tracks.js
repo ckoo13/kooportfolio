@@ -4,7 +4,7 @@ export default async(req, res) => {
     const response = await getTopTracks();
     const { items } = await response.json();
 
-    const tracks = 
+    // const tracks = 
 
     return res.status(200).json(items);
 }
