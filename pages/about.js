@@ -36,6 +36,14 @@ export default function About() {
                     </Stack>
                 </Box>
             </Flex>
+
+            <Stack>
+                {tracks.map(track => {
+                    return (
+                        <Text>{track.title}</Text>
+                    )
+                })}
+            </Stack>
         </Flex>
     )
 };
