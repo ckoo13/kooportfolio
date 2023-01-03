@@ -14,8 +14,8 @@ export default function About({data}) {
 
 
     useEffect(() => {
-        setTracks(data);
-    }, [data])
+        fetchTopTracks();
+    }, [])
 
     useEffect(() => {
         if (emblaApi) {
@@ -23,6 +23,41 @@ export default function About({data}) {
         }
     }, [emblaApi])
 
+    const fetchTopTracks = async() => {
+        const response = await fetch(`/api/top-tracks`);
+        const data = await response.json();
+
+        setTracks(data);
+    }
+
+    const buildCarousel = () => {
+        if (tracks.length == 0) {
+            return (
+                <Text>Image Loading</Text>
+            )
+        }
+        else {
+            return (
+                <Box className="embla" overflow='hidden' ref={emblaRef}>
+                    <Box className="embla__container" display='flex'>
+                        {tracks.map((track, i) => {
+                            return (
+                                <Card key={i} className="embla__slide" minWidth='0' flex='0 0 100%'>
+                                    <CardBody>
+                                        <Image src={track.image} alt='album image'></Image>
+                                        <Stack>
+                                            <Heading>{track.title}</Heading>
+                                            <Text>{track.artist}</Text>
+                                        </Stack>
+                                    </CardBody>
+                                </Card>
+                            )
+                        })}
+                    </Box>
+                </Box>
+            )
+        }
+    }
     
     return (
         <Flex flexDirection='column' alignItems='center'>
@@ -41,35 +76,7 @@ export default function About({data}) {
                 </Box>
             </Flex>
 
-            
-            <Box className="embla" overflow='hidden' ref={emblaRef}>
-                <Box className="embla__container" display='flex'>
-                    {data.map((track, i) => {
-                        return (
-                            <Card key={i} className="embla__slide" minWidth='0' flex='0 0 100%'>
-                                <CardBody>
-                                    <Image src={track.image} alt='album image'></Image>
-                                    <Stack>
-                                        <Heading>{track.title}</Heading>
-                                        <Text>{track.artist}</Text>
-                                    </Stack>
-                                </CardBody>
-                            </Card>
-                        )
-                    })}
-                </Box>
-            </Box>
+            {buildCarousel()}
         </Flex>
     )
 };
-
-export const getServerSideProps = async() => {
-    const response = await fetch(`${server}/api/top-tracks`);
-    const data = await response.json();
-
-    return {
-        props: {
-            data
-        }
-    }
-}
