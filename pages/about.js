@@ -15,7 +15,7 @@ export default function About({data}) {
 
     useEffect(() => {
         setTracks(data);
-    }, [])
+    }, [data])
 
     useEffect(() => {
         if (emblaApi) {
@@ -44,11 +44,11 @@ export default function About({data}) {
             
             <Box className="embla" overflow='hidden' ref={emblaRef}>
                 <Box className="embla__container" display='flex'>
-                    {data.map(track => {
+                    {data.map((track, i) => {
                         return (
-                            <Card className="embla__slide" minWidth='0' flex='0 0 100%'>
+                            <Card key={i} className="embla__slide" minWidth='0' flex='0 0 100%'>
                                 <CardBody>
-                                    <Image src={track.image}></Image>
+                                    <Image src={track.image} alt='album image'></Image>
                                     <Stack>
                                         <Heading>{track.title}</Heading>
                                         <Text>{track.artist}</Text>
