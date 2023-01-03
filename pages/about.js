@@ -3,36 +3,19 @@ import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
 import Navbar from "../components/Navbar";
-import { server } from '../config/index';
+import Emoji from "../components/Emoji";
 
 import { Box, Flex, Image, Text, Stack, Heading, Button } from "@chakra-ui/react";
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 
-export default function About({data}) {
-    const [tracks, setTracks] = useState([]);
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
 
+export default function About() {
+    const [tracks, setTracks] = useState([]);
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
     useEffect(() => {
         fetchTopTracks();
     }, [])
-
-    useEffect(() => {
-        if (emblaApi) {
-
-        }
-    }, [emblaApi])
-
-    const scrollPrev = useCallback(
-        () => {
-            if (emblaApi) emblaApi.scrollPrev()
-        },
-        [emblaApi]
-    )
-
-    const scrollNext = useCallback(() => {
-        if (emblaApi) emblaApi.scrollNext()
-    }, [emblaApi])
 
     const fetchTopTracks = async() => {
         const response = await fetch(`/api/top-tracks`);
@@ -49,23 +32,28 @@ export default function About({data}) {
         }
         else {
             return (
-                <Box className="embla" overflow='hidden' ref={emblaRef} maxWidth='20%'>
-                    <Box className="embla__container" display='flex' alignItems='center'>
-                        {tracks.map((track, i) => {
-                            return (
-                                <Card key={i} maxW='sm' className="embla__slide" minWidth='0' flex='0 0 100%' marginX='20px' alignItems='center'>
-                                    <CardBody>
-                                        <Image width={{base:'100px', md:'150px', lg:'150px'}} src={track.image} alt='album image'></Image>
-                                        <Stack>
-                                            <Heading>{track.title}</Heading>
-                                            <Text>{track.artist}</Text>
-                                        </Stack>
-                                    </CardBody>
-                                </Card>
-                            )
-                        })}
+                <>
+                    <Heading marginTop={{base:'10px', md:'20px', lg:'100px'}} size='md'>My favorite tunes updated daily <Emoji symbol='🎵'/></Heading>
+                    <Box className="embla" overflow='hidden' maxWidth='20%'>
+                        <Box className="embla__viewport" ref={emblaRef}>
+                            <Box className="embla__container" display='flex' alignItems='center'>
+                                {tracks.map((track, i) => {
+                                    return (
+                                        <Card textAlign='center' key={i} maxW='sm' className="embla__slide" minWidth='0' flex='0 0 100%' marginX='20px' alignItems='center'>
+                                            <CardBody>
+                                                <Stack alignItems='center'>
+                                                    <Image width={{base:'100px', md:'150px', lg:'150px'}} src={track.image} alt='album image'></Image>
+                                                    <Heading size='md'>{track.title}</Heading>
+                                                    <Text>{track.artist}</Text>
+                                                </Stack>
+                                            </CardBody>
+                                        </Card>
+                                    )
+                                })}
+                            </Box>
+                        </Box>
                     </Box>
-                </Box>
+                </>
             )
         }
     }
@@ -86,6 +74,7 @@ export default function About({data}) {
                     </Stack>
                 </Box>
             </Flex>
+
 
             {buildCarousel()}
         </Flex>
