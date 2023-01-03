@@ -28,7 +28,7 @@ export default function PortfolioItem({project}) {
     //     )
     // }
 
-    const src = `/${title}.png`;
+    const src = `../${title}.png`;
 
     return (
         <Flex flexDirection={{base:'column', md:'row', lg:'row'}} alignItems={{base:'center', md:'center', lg:'center'}} width='100%'>
