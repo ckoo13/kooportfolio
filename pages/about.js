@@ -75,7 +75,9 @@ export default function About() {
                     </Stack>
                 </Box>
             </Flex>
-
+            
+            <Text fontSize={{base:'2em', md:'2em', lg: '2em'}} ><Emoji symbol='👇' /></Text>
+            
             {buildCarousel()}
         </Flex>
     )
