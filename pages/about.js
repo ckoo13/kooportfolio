@@ -7,6 +7,7 @@ import Emoji from "../components/Emoji";
 
 import { Box, Flex, Image, Text, Stack, Heading, Button } from "@chakra-ui/react";
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
+import { Spinner } from "@chakra-ui/react";
 
 
 export default function About() {
@@ -27,7 +28,7 @@ export default function About() {
     const buildCarousel = () => {
         if (tracks.length == 0) {
             return (
-                <Text>Image Loading</Text>
+                <Spinner marginTop={{base:'10px', md:'20px', lg:'100px'}} />
             )
         }
         else {
