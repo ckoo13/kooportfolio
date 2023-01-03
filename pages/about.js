@@ -33,7 +33,7 @@ export default function About() {
         else {
             return (
                 <>
-                    <Heading marginTop={{base:'10px', md:'20px', lg:'100px'}} size='md'>My favorite tunes updated daily <Emoji symbol='🎵'/></Heading>
+                    <Heading marginTop={{base:'10px', md:'20px', lg:'100px'}} size='md'>Scroll for my favorite tunes updated daily <Emoji symbol='🎵'/></Heading>
                     <Box className="embla" overflow='hidden' maxWidth='20%'>
                         <Box className="embla__viewport" ref={emblaRef}>
                             <Box className="embla__container" display='flex' alignItems='center'>
@@ -74,7 +74,6 @@ export default function About() {
                     </Stack>
                 </Box>
             </Flex>
-
 
             {buildCarousel()}
         </Flex>

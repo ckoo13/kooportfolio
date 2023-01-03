@@ -20,13 +20,15 @@ export default function PortfolioItem({project}) {
         setLiveLink(project.liveLink);
     }, []);
 
-    const projectImage = () => {
-        const src = `/${title}.png`;
+    // const projectImage = () => {
+    //     const src = `/${title}.png`;
 
-        return (
-            <Image cursor='pointer' boxShadow='lg' width={{base:'100%', md:'50%', lg:'50%'}} padding={{base:'5', md:'5', lg:'5'}}  marginX={{base:'0', md:'20', lg:'20'}} src={src} alt='image not loaded'></Image>
-        )
-    }
+    //     return (
+    //         <Image cursor='pointer' boxShadow='lg' width={{base:'100%', md:'50%', lg:'50%'}} padding={{base:'5', md:'5', lg:'5'}}  marginX={{base:'0', md:'20', lg:'20'}} src={src} alt='image not loaded'></Image>
+    //     )
+    // }
+
+    const src = `/${title}.png`;
 
     return (
         <Flex flexDirection={{base:'column', md:'row', lg:'row'}} alignItems={{base:'center', md:'center', lg:'center'}} width='100%'>
@@ -40,7 +42,7 @@ export default function PortfolioItem({project}) {
                 <Button w='40%'><a href={githubLink} target='_blank' rel="noreferrer">Github Repo</a></Button>
             </Flex>
 
-            {projectImage()}
+            <Image cursor='pointer' boxShadow='lg' width={{base:'100%', md:'50%', lg:'50%'}} padding={{base:'5', md:'5', lg:'5'}}  marginX={{base:'0', md:'20', lg:'20'}} src={src} alt='image not loaded'></Image>
         </Flex>
     )
 }
