@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 
 import Navbar from "../components/Navbar";
 
@@ -8,6 +9,13 @@ import { Box, Flex, Image, Text, Stack } from "@chakra-ui/react";
 
 export default function About() {
     const [tracks, setTracks] = useState([]);
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false })
+
+    useEffect(() => {
+        if (emblaApi) {
+
+        }
+    }, [emblaApi])
 
     useEffect(() => {
         fetchTopTracks();
@@ -37,13 +45,13 @@ export default function About() {
                 </Box>
             </Flex>
 
-            <Stack>
-                {tracks.map(track => {
-                    return (
-                        <Text>{track.title}</Text>
-                    )
-                })}
-            </Stack>
+            <Box className="embla" overflow='hidden' ref={emblaRef}>
+                <Box className="embla__container" display='flex'>
+                    <Box className="embla__slide" flex='0 0 100%'>Slide 1</Box>
+                    <Box className="embla__slide" flex='0 0 100%'>Slide 2</Box>
+                    <Box className="embla__slide" flex='0 0 100%'>Slide 3</Box>
+                </Box>
+            </Box>
         </Flex>
     )
 };
