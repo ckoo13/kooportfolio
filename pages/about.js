@@ -76,11 +76,7 @@ export default function About({data}) {
                 </Box>
             </Flex>
 
-            {tracks.map((track,i) => {
-                return (
-                    <Text key={i}>{track.title}</Text>
-                )
-            }) }
+            {buildCarousel()}
         </Flex>
     )
 };
