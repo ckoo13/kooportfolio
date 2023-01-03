@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
 import Navbar from "../components/Navbar";
+import { server } from '../config/index';
 
 import { Box, Flex, Image, Text, Stack, Heading } from "@chakra-ui/react";
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
@@ -63,7 +64,7 @@ export default function About({data}) {
 };
 
 export const getServerSideProps = async() => {
-    const response = await fetch(`http://localhost:3000/api/top-tracks`);
+    const response = await fetch(`${server}/api/top-tracks`);
     const data = await response.json();
 
     return {
