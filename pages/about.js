@@ -5,11 +5,11 @@ import useEmblaCarousel from "embla-carousel-react";
 import Navbar from "../components/Navbar";
 
 import { Box, Flex, Image, Text, Stack } from "@chakra-ui/react";
-
+import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 
 export default function About() {
     const [tracks, setTracks] = useState([]);
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false })
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
 
     useEffect(() => {
         if (emblaApi) {
@@ -36,7 +36,7 @@ export default function About() {
                 <Image marginLeft={{base:'0', md:'10', lg:'20'}} borderRadius='12px' marginBottom={{base:'10', md:'0', lg:'0'}} boxSize={{base: '250px', md:'250px', lg:'300px'}} objectFit="cover" src="/about.jpg"></Image>
 
                 <Box width='60%' marginRight={{base:'0', md:'10', lg:'20'}}>
-                    <Stack  spacing={3} textAlign='left'>
+                    <Stack spacing={3} textAlign='left'>
                         <Text fontFamily='Gotham' fontWeight='bold' fontSize={{base: '24px', md:'24px', lg:'32px'}}>Hi, my name is Calvin Koo!</Text>
                         <Text>I am a recent graduate of Claremont McKenna College with a degree in Economics and Asian Studies. In addition to my undergraduate degree, I recently completed a full-stack engineering bootcamp in App Academy where I honed my technical skills through building applications using technologies such as ReactJS and Ruby on Rails. I have always been passionate about building software products that can help to improve both businesses and the lives of everyday people at scale.</Text>
                         <Text>From founding my own product design club on campus at Claremont Marketing Group, working as an associate at a fast-paced growth company in AlphaSights, to working at a rapidly growing startup in Coda developing go-to-market growth strategies, my diverse range of expertise within the technology space provides me with a holistic approach in applying my technical skills. </Text>
@@ -45,13 +45,28 @@ export default function About() {
                 </Box>
             </Flex>
 
-            <Box className="embla" overflow='hidden' ref={emblaRef}>
+            
+            {/* <Box className="embla" overflow='hidden' ref={emblaRef}>
                 <Box className="embla__container" display='flex'>
-                    <Box className="embla__slide" flex='0 0 100%'>Slide 1</Box>
-                    <Box className="embla__slide" flex='0 0 100%'>Slide 2</Box>
-                    <Box className="embla__slide" flex='0 0 100%'>Slide 3</Box>
+                    {tracks.map(track => {
+                        if (track){
+                            return (
+                                <Card className="embla__slide">
+                                    <CardBody>
+                                        <Image src={track.image}>
+    
+                                        </Image>
+                                    </CardBody>
+                                </Card>
+                            )
+                        } else {
+                            return (
+                                <div className="embla__slide">Not Loaded</div>
+                            )
+                        }
+                    })}
                 </Box>
-            </Box>
+            </Box> */}
         </Flex>
     )
 };
