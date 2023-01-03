@@ -7,9 +7,14 @@ import Navbar from "../components/Navbar";
 import { Box, Flex, Image, Text, Stack } from "@chakra-ui/react";
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 
-export default function About() {
+export default function About({data}) {
     const [tracks, setTracks] = useState([]);
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+
+
+    useEffect(() => {
+        setTracks(data);
+    }, [])
 
     useEffect(() => {
         if (emblaApi) {
@@ -17,16 +22,6 @@ export default function About() {
         }
     }, [emblaApi])
 
-    useEffect(() => {
-        fetchTopTracks();
-    }, [])
-
-    const fetchTopTracks = async () => {
-        const response = await fetch("/api/top-tracks");
-        const data = await response.json();
-
-        setTracks(data);
-    }
     
     return (
         <Flex flexDirection='column' alignItems='center'>
@@ -46,27 +41,31 @@ export default function About() {
             </Flex>
 
             
-            {/* <Box className="embla" overflow='hidden' ref={emblaRef}>
+            <Box className="embla" overflow='hidden' ref={emblaRef}>
                 <Box className="embla__container" display='flex'>
-                    {tracks.map(track => {
-                        if (track){
-                            return (
-                                <Card className="embla__slide">
-                                    <CardBody>
-                                        <Image src={track.image}>
-    
-                                        </Image>
-                                    </CardBody>
-                                </Card>
-                            )
-                        } else {
-                            return (
-                                <div className="embla__slide">Not Loaded</div>
-                            )
-                        }
+                    {data.map(track => {
+                        return (
+                            <Card className="embla__slide" minWidth='0' flex='0 0 100%'>
+                                <CardBody>
+                                    <Image src={track.image}></Image>
+                                    
+                                </CardBody>
+                            </Card>
+                        )
                     })}
                 </Box>
-            </Box> */}
+            </Box>
         </Flex>
     )
 };
+
+export const getServerSideProps = async() => {
+    const response = await fetch(`http://localhost:3000/api/top-tracks`);
+    const data = await response.json();
+
+    return {
+        props: {
+            data
+        }
+    }
+}
