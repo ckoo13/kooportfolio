@@ -11,6 +11,7 @@ export default function PortfolioItem({project}) {
     const [projectType, setProjectType] = useState('');
     const [githubLink , setGithubLink] = useState('');
     const [liveLink, setLiveLink] = useState('');
+    const [lowerTitle, setLowerTitle] = useState('');
 
     useEffect(() => {
         setTitle(project.title);
@@ -18,6 +19,7 @@ export default function PortfolioItem({project}) {
         setProjectType(project.projectType);
         setGithubLink(project.githubLink);
         setLiveLink(project.liveLink);
+        setLowerTitle(project.lowerTitle)
     }, []);
 
     // const projectImage = () => {
@@ -28,7 +30,7 @@ export default function PortfolioItem({project}) {
     //     )
     // }
 
-    const src = `../${title}.png`;
+    const src = `../${lowerTitle}.png`;
 
     return (
         <Flex flexDirection={{base:'column', md:'row', lg:'row'}} alignItems={{base:'center', md:'center', lg:'center'}} width='100%'>
