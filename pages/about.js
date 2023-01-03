@@ -4,7 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 
 import Navbar from "../components/Navbar";
 
-import { Box, Flex, Image, Text, Stack } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Stack, Heading } from "@chakra-ui/react";
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 
 export default function About({data}) {
@@ -48,7 +48,10 @@ export default function About({data}) {
                             <Card className="embla__slide" minWidth='0' flex='0 0 100%'>
                                 <CardBody>
                                     <Image src={track.image}></Image>
-                                    
+                                    <Stack>
+                                        <Heading>{track.title}</Heading>
+                                        <Text>{track.artist}</Text>
+                                    </Stack>
                                 </CardBody>
                             </Card>
                         )
