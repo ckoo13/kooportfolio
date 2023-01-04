@@ -35,7 +35,7 @@ export default function About() {
             return (
                 <>
                     <Heading marginTop={{base:'10px', md:'20px', lg:'100px'}} size='md'>Scroll for my favorite tunes updated daily <Emoji symbol='🎵'/></Heading>
-                    <Box className="embla" overflow='hidden' maxWidth='20%'>
+                    <Box className="embla" overflow='hidden' maxWidth={{base: '30%', md:'25%', lg:'20%'}}>
                         <Box className="embla__viewport" ref={emblaRef}>
                             <Box className="embla__container" display='flex' alignItems='center'>
                                 {tracks.map((track, i) => {
