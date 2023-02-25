@@ -43,7 +43,8 @@ export default function PortfolioItem({project}) {
                 <Button w='40%'><a href={liveLink} target='_blank' rel="noreferrer">Live Link</a></Button>
                 <Button w='40%'><a href={githubLink} target='_blank' rel="noreferrer">Github Repo</a></Button>
             </Flex>
-
+            
+            
             <Image cursor='pointer' boxShadow='lg' width={{base:'100%', md:'50%', lg:'50%'}} padding={{base:'5', md:'5', lg:'5'}}  marginX={{base:'0', md:'20', lg:'20'}} src={src} alt='image not loaded'></Image>
         </Flex>
     )
