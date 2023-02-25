@@ -1,5 +1,6 @@
 import React from 'react';
 import Typed from 'typed.js';
+
 import Emoji from './Emoji';
 import { useRef } from 'react';
 

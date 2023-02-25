@@ -1,10 +1,9 @@
 import Head from 'next/head';
 
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import PortfolioItem from '../components/PortfolioItem';
 import Emoji from '../components/Emoji';
-import ExperienceItem from '../components/ExperienceItem';
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
