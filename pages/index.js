@@ -54,7 +54,7 @@ export default function Home() {
       </VStack>
 
       {/* Experience Section */}
-      <Text fontWeight='bold' marginTop={{base:'2em', md:'2em', lg:'3em'}} marginBottom={{base:'1em', md:'1em', lg:'1em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}} >Experience</Text>
+      {/* <Text fontWeight='bold' marginTop={{base:'2em', md:'2em', lg:'3em'}} marginBottom={{base:'1em', md:'1em', lg:'1em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}} >Experience</Text>
 
       <Tabs size='sm' isFitted variant='enclosed'>
         <TabList>
@@ -83,7 +83,7 @@ export default function Home() {
             </TabPanel>
           </TabPanels>
 
-      </Tabs>
+      </Tabs> */}
 
       {/* Contact Section */}
       <VStack spacing={3} marginBottom='2em'>
