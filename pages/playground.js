@@ -9,7 +9,7 @@ export default function Playground() {
         <Flex flexDirection='column' alignItems='center' >
             <Navbar />
 
-            Under construction!
+            Under construction process!
         </Flex>
     )
 }
