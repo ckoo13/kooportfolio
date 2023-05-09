@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
               src="https://www.googletagmanager.com/gtag/js?id=G-VTTW78MWXC" 
       />
 
-      <Script>
+      <Script id='my-script'>
         {`window.dataLayer = window.dataLayer || []; 
           function gtag(){dataLayer.push(arguments);} 
           gtag('js', new Date()); 
