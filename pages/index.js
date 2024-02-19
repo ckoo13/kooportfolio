@@ -87,7 +87,7 @@ export default function Home() {
       {/* Contact Section */}
       <VStack spacing={3} marginBottom='2em'>
         <Text fontWeight='bold' marginTop={{base:'2em', md:'2em', lg:'3em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}} >Contact</Text>
-        <Text textAlign='center' width='50%'>I am currently seeking full-time software engineering opportunities. Please contact me if you have such opportunities or if you are interested in working with me.</Text>
+        <Text textAlign='center' width='50%'>I am currently seeking full-time roles in product, strategy, growth, or product success. Please contact me if you have such opportunities or if you are interested in working with me.</Text>
         <Button w='40%'><a href='mailto:kkoo22@students.claremontmckenna.edu' target='_blank' rel="noreferrer">Say Hello</a></Button>
       </VStack>
 

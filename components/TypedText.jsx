@@ -15,8 +15,8 @@ const TypedText = () => {
         const options = {
             strings: [
                 'I am Calvin Koo',
-                'I am a software engineer',
-                'I am a product manager',
+                'I am a strategy/CS/product specialist',
+                'I am a soccer fanatic',
                 'I am happy you are here!'
             ],
             typeSpeed: 70,
