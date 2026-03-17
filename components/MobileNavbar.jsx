@@ -37,13 +37,11 @@ export default function MobileNavbar() {
                 <DrawerContent>
                     <DrawerCloseButton/>
                     <DrawerBody>
-                        <VStack alignItems='center'>
+                        <VStack alignItems='center' spacing={8} pt={16} fontSize='xl'>
                             <Link href='/'>Home</Link>
                             <Link href='/playground'>Playground</Link>
                             <Link href='/about'>About</Link>
-                            <a href="/resume.pdf" target='_blank'>
-                                <Text marginX={4}>Resume</Text>
-                            </a>
+                            <a href="/resume.pdf" target='_blank'>Resume</a>
                         </VStack>
                     </DrawerBody>
                 </DrawerContent>

@@ -35,7 +35,7 @@ export default function About() {
             return (
                 <>
                     <Heading marginTop={{base:'10px', md:'20px', lg:'100px'}} size='md'>Scroll for my favorite tunes updated daily <Emoji symbol='🎵'/></Heading>
-                    <Box className="embla" overflow='hidden' maxWidth={{base: '30%', md:'25%', lg:'20%'}}>
+                    <Box className="embla" overflow='hidden' maxWidth={{base: '85%', md:'40%', lg:'25%'}}>
                         <Box className="embla__viewport" ref={emblaRef}>
                             <Box className="embla__container" display='flex' alignItems='center'>
                                 {tracks.map((track, i) => {
@@ -66,7 +66,7 @@ export default function About() {
             <Flex paddingY={{base:'10', md:'20', lg:'20'}} flexDirection={{base:'column', md:'row', lg:'row'}} alignItems='center' justifyContent='space-between' width='100%'>
                 <Image marginLeft={{base:'0', md:'10', lg:'20'}} borderRadius='12px' marginBottom={{base:'10', md:'0', lg:'0'}} boxSize={{base: '250px', md:'250px', lg:'300px'}} objectFit="cover" src="/about.jpg"></Image>
 
-                <Box width='60%' marginRight={{base:'0', md:'10', lg:'20'}}>
+                <Box width={{base:'90%', md:'60%', lg:'60%'}} marginRight={{base:'0', md:'10', lg:'20'}}>
                     <Stack spacing={3} textAlign='left'>
                         <Text fontFamily='Gotham' fontWeight='bold' fontSize={{base: '24px', md:'24px', lg:'32px'}}>Hi, my name is Calvin Koo!</Text>
                         <Text>I graduated from Claremont McKenna College with a degree in Economics and Asian Studies in 2023. Since graduating, I’ve been working at AlphaSights in New York City, leading a Private Equity account worth $2B in AUM. I’ve also completed a full-stack engineering bootcamp at App Academy where I honed my technical skills by building applications using technologies such as ReactJS and Ruby On Rails.</Text>

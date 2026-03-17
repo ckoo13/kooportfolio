@@ -34,14 +34,14 @@ export default function PortfolioItem({project}) {
 
     return (
         <Flex flexDirection={{base:'column', md:'row', lg:'row'}} alignItems={{base:'center', md:'center', lg:'center'}} width='100%'>
-            <Flex textAlign='center' flexDirection='column' gap='5' marginX={{base:'10', md:'10', lg:'20'}} alignItems='center'>
+            <Flex textAlign='center' flexDirection='column' gap='5' marginX={{base:'4', md:'10', lg:'20'}} alignItems='center'>
                 <Text fontSize={{base:'28px', md:'36px', lg:'40px'}} fontWeight='bolder'>{title}</Text>
                 <Text fontStyle='italic'>{projectType}</Text>
                 <Text>{description}</Text>
                 {/* need to add on click event for view project button */}
     
-                <Button w='40%'><a href={liveLink} target='_blank' rel="noreferrer">Live Link</a></Button>
-                <Button w='40%'><a href={githubLink} target='_blank' rel="noreferrer">Github Repo</a></Button>
+                <Button w={{base:'70%', md:'40%', lg:'40%'}}><a href={liveLink} target='_blank' rel="noreferrer">Live Link</a></Button>
+                <Button w={{base:'70%', md:'40%', lg:'40%'}}><a href={githubLink} target='_blank' rel="noreferrer">Github Repo</a></Button>
             </Flex>
             
             

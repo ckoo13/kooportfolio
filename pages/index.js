@@ -87,8 +87,8 @@ export default function Home() {
       {/* Contact Section */}
       <VStack spacing={3} marginBottom='2em'>
         <Text fontWeight='bold' marginTop={{base:'2em', md:'2em', lg:'3em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}} >Contact</Text>
-        <Text textAlign='center' width='50%'>I&apos;d love to connect with peer investors. Feel free to reach out.</Text>
-        <Button w='40%'><a href='mailto:kyungmkoo13@gmail.com' target='_blank' rel="noreferrer">Say Hello</a></Button>
+        <Text textAlign='center' width={{base:'85%', md:'50%', lg:'50%'}}>I&apos;d love to connect with peer investors. Feel free to reach out.</Text>
+        <Button w={{base:'60%', md:'40%', lg:'40%'}}><a href='mailto:kyungmkoo13@gmail.com' target='_blank' rel="noreferrer">Say Hello</a></Button>
       </VStack>
 
     </Flex>
