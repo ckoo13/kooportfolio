@@ -29,6 +29,9 @@
     "touch-cli": "^0.0.1",
     "typed.js": "^2.0.12"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "devDependencies": {
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.28",
