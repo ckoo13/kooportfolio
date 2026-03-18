@@ -1,57 +1,12 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import useEmblaCarousel from "embla-carousel-react";
 
 import Navbar from "../components/Navbar";
-import Emoji from "../components/Emoji";
 
-import { Box, Flex, Image, Text, Stack, Heading, Divider, useColorModeValue } from "@chakra-ui/react";
-import { Card, CardBody } from '@chakra-ui/react';
-import { Spinner } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Stack, Heading, useColorModeValue } from "@chakra-ui/react";
 
 
 export default function About() {
-    const [tracks, setTracks] = useState([]);
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-
     const panelBg = useColorModeValue('gray.50', 'whiteAlpha.100');
-
-    useEffect(() => {
-        fetchTopTracks();
-    }, [])
-
-    const fetchTopTracks = async() => {
-        const response = await fetch(`/api/top-tracks`);
-        const data = await response.json();
-        setTracks(data);
-    }
-
-    const buildCarousel = () => {
-        if (tracks.length == 0) {
-            return <Spinner marginY='20px' />;
-        }
-        return (
-            <div className="embla">
-                <div className="embla__viewport" ref={emblaRef}>
-                    <div className="embla__container">
-                        {tracks.map((track, i) => (
-                            <div className="embla__slide" key={i}>
-                                <Card textAlign='center' alignItems='center'>
-                                    <CardBody>
-                                        <Stack alignItems='center'>
-                                            <Image width='90px' src={track.image} alt='album image' />
-                                            <Text fontWeight='bold' fontSize='sm'>{track.title}</Text>
-                                            <Text fontSize='xs'>{track.artist}</Text>
-                                        </Stack>
-                                    </CardBody>
-                                </Card>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        );
-    }
 
     return (
         <Flex flexDirection='column' alignItems='center' width='100%'>
@@ -101,13 +56,6 @@ export default function About() {
                     <Text as='li' fontSize={{base:'14px', md:'15px', lg:'15px'}}>Accelerating technology adoption in financial services driving demand for digital and core banking advisory</Text>
                 </Stack>
             </Box>
-
-            <Divider width={{base:'88%', md:'75%', lg:'60%'}} />
-
-            <Flex flexDirection='column' alignItems='center' paddingY={{base:'6', md:'8', lg:'10'}}>
-                <Heading size='sm' marginBottom={4}>Currently Listening <Emoji symbol='🎵'/></Heading>
-                {buildCarousel()}
-            </Flex>
         </Flex>
     )
 };
