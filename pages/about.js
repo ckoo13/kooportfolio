@@ -77,7 +77,7 @@ export default function About() {
                 />
 
                 <Stack spacing={3} textAlign='left' maxWidth={{base:'100%', md:'55%', lg:'55%'}}>
-                    <Text fontFamily='Gotham' fontWeight='bold' fontSize={{base:'22px', md:'24px', lg:'32px'}}>Hi, my name is Calvin Koo!</Text>
+                    <Text fontFamily='Gotham' fontWeight='bold' fontSize={{base:'22px', md:'24px', lg:'32px'}}>Hi, my name is Calvin Koo</Text>
                     <Text fontSize={{base:'14px', md:'15px', lg:'16px'}}>I&apos;m a Private Equity investor at Sunstone Partners in San Mateo, where I focus on growth equity investments in tech-enabled services and software businesses. I graduated from Claremont McKenna College with a degree in Economics and Asian Studies.</Text>
                     <Text fontSize={{base:'14px', md:'15px', lg:'16px'}}>I&apos;ve also completed a full-stack engineering bootcamp at App Academy, where I built applications in ReactJS and Ruby on Rails — which is how this site came to be. I&apos;m passionate about the intersection of technology, strategy, and business, and I write about what I&apos;m learning on Substack and Brunch Korea.</Text>
                     <Text fontSize={{base:'14px', md:'15px', lg:'16px'}}>Feel free to reach out at kyungmkoo13@gmail.com — always happy to connect with fellow investors and builders.</Text>
