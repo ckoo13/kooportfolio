@@ -5,7 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Navbar from "../components/Navbar";
 import Emoji from "../components/Emoji";
 
-import { Box, Flex, Image, Text, Stack, Heading, Divider } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Stack, Heading, Divider, useColorModeValue } from "@chakra-ui/react";
 import { Card, CardBody } from '@chakra-ui/react'
 import { Spinner } from "@chakra-ui/react";
 
@@ -13,6 +13,8 @@ import { Spinner } from "@chakra-ui/react";
 export default function About() {
     const [tracks, setTracks] = useState([]);
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
+    const watchingBg = useColorModeValue('gray.50', 'whiteAlpha.100');
 
     useEffect(() => {
         fetchTopTracks();
@@ -66,9 +68,10 @@ export default function About() {
                 </Box>
             </Flex>
 
-            <Box width={{base:'90%', md:'70%', lg:'60%'}} marginBottom={{base:'6', md:'8', lg:'10'}}>
-                <Heading size='md' marginBottom={4}>Currently Watching</Heading>
-                <Stack spacing={2} as='ul' styleType='disc' paddingLeft={5}>
+            {/* Currently Watching — full-width band */}
+            <Box width='100%' bg={watchingBg} paddingY={{base:'8', md:'10', lg:'12'}} paddingX={{base:'6', md:'16', lg:'24'}}>
+                <Heading size='md' marginBottom={5}>Currently Watching</Heading>
+                <Stack spacing={3} as='ul' styleType='disc' paddingLeft={5}>
                     <Text as='li'>Patent cliffs and post-2022/23 launch slowdowns driving renewed focus on post-market pharma functions like pharmacovigilance and medical affairs</Text>
                     <Text as='li'>Founder-built RCM and CDI businesses that have earned mission-critical status through strong organizational delivery, with a clear opportunity to layer in automation and AI to expand margins</Text>
                     <Text as='li'>Accelerating technology adoption in financial services driving demand for digital and core banking advisory</Text>
@@ -76,11 +79,12 @@ export default function About() {
                 </Stack>
             </Box>
 
-            <Divider width={{base:'80%', md:'70%', lg:'60%'}} marginBottom={{base:'4', md:'6', lg:'8'}} />
+            <Divider />
 
-            <Heading size='sm' marginBottom={4}>Currently Listening <Emoji symbol='🎵'/></Heading>
-            {buildCarousel()}
-            <Box marginBottom='3em' />
+            <Flex flexDirection='column' alignItems='center' paddingY={{base:'6', md:'8', lg:'10'}}>
+                <Heading size='sm' marginBottom={4}>Currently Listening <Emoji symbol='🎵'/></Heading>
+                {buildCarousel()}
+            </Flex>
         </Flex>
     )
 };

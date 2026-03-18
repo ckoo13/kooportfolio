@@ -30,7 +30,7 @@ export default function PortfolioItem({project}) {
     //     )
     // }
 
-    const src = `../${lowerTitle}.png`;
+    const src = `/${lowerTitle}.jpg`;
 
     return (
         <Flex flexDirection={{base:'column', md:'row', lg:'row'}} alignItems={{base:'center', md:'center', lg:'center'}} width='100%'>
