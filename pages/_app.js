@@ -1,11 +1,13 @@
 import '../styles/globals.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/react'
 
 function MyApp({ Component, pageProps }) {
-  return (  
+  return (
     <ChakraProvider>
       <Component {...pageProps} />
+      <Analytics />
 
       <Script strategy='afterInteractive' 
               src="https://www.googletagmanager.com/gtag/js?id=G-VTTW78MWXC" 
