@@ -53,10 +53,10 @@ export default function About() {
         <Flex flexDirection='column' alignItems='center'>
             <Navbar />
 
-            <Flex paddingY={{base:'8', md:'14', lg:'16'}} flexDirection={{base:'column', md:'row', lg:'row'}} alignItems='center' justifyContent='space-between' width='100%'>
-                <Image marginLeft={{base:'0', md:'10', lg:'20'}} borderRadius='12px' marginBottom={{base:'8', md:'0', lg:'0'}} boxSize={{base: '220px', md:'250px', lg:'280px'}} objectFit="cover" src="/about2.JPG" alt="Calvin Koo"></Image>
+            <Flex paddingY={{base:'8', md:'14', lg:'16'}} flexDirection={{base:'column', md:'row', lg:'row'}} alignItems='center' justifyContent='center' gap={{base:'6', md:'10', lg:'16'}} width='100%' paddingX={{base:'4', md:'10', lg:'16'}}>
+                <Image flexShrink={0} borderRadius='12px' marginBottom={{base:'4', md:'0', lg:'0'}} boxSize={{base: '220px', md:'250px', lg:'280px'}} objectFit="cover" src="/about2.JPG" alt="Calvin Koo"></Image>
 
-                <Box width={{base:'90%', md:'60%', lg:'60%'}} marginRight={{base:'0', md:'10', lg:'20'}}>
+                <Box width={{base:'90%', md:'55%', lg:'55%'}}>
                     <Stack spacing={3} textAlign='left'>
                         <Text fontFamily='Gotham' fontWeight='bold' fontSize={{base: '24px', md:'24px', lg:'32px'}}>Hi, my name is Calvin Koo!</Text>
                         <Text>I&apos;m a Private Equity investor at Sunstone Partners in San Mateo, where I focus on growth equity investments in tech-enabled services and software businesses. I graduated from Claremont McKenna College with a degree in Economics and Asian Studies.</Text>

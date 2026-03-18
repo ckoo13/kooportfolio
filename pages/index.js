@@ -22,12 +22,12 @@ export default function Home() {
     {
       title: 'Pharma Services',
       subtitle: null,
-      description: 'Pharmaceutical services businesses supporting post-market functions — pharmacovigilance, medical affairs, real-world data, and GxP compliance. Regulatory complexity and the need for specialized expertise drive persistent outsourcing demand from large and mid-size pharma alike.'
+      description: 'Pharmaceutical services businesses spanning the drug development and commercialization lifecycle — from GxP compliance and medical affairs support during late-stage development through pharmacovigilance and real-world data post-launch. Regulatory complexity and the demand for specialized expertise drive persistent outsourcing from large and mid-size pharma alike.'
     },
     {
       title: 'Digital Infrastructure',
       subtitle: 'Data Center Services',
-      description: 'Businesses delivering colocation, managed services, and cloud-adjacent infrastructure — sectors defined by predictable recurring revenue, low churn, and strong secular tailwinds as organizations migrate away from legacy IT environments.'
+      description: 'Data center and digital infrastructure services businesses — including third-party hardware maintenance, facilities management, GPU infrastructure buildouts, and data center infrastructure management (DCIM). Mission-critical operations with predictable recurring revenue and strong secular tailwinds as enterprises modernize and AI workloads drive demand for next-generation compute.'
     },
     {
       title: 'Fintech',
@@ -84,7 +84,7 @@ export default function Home() {
                 <Text color='white' fontWeight='black' fontSize='lg'>B</Text>
               </Box>
               <Heading size='sm'>Brunch Korea</Heading>
-              <Text fontSize='sm'>Korean-language content on tech and business.</Text>
+              <Text fontSize='sm'>Thoughts on PE, technology, and markets — in Korean.</Text>
               <Button size='sm' w='60%'><a href='https://brunch.co.kr/@5af0036e44274b2' target='_blank' rel="noreferrer">Read</a></Button>
             </VStack>
           </CardBody>
@@ -114,9 +114,9 @@ export default function Home() {
       <Divider width={{base:'80%', md:'70%', lg:'60%'}} marginBottom={{base:'1.5em', md:'1.5em', lg:'2em'}} />
 
       {/* Contact Section */}
-      <VStack spacing={3} marginBottom='2em'>
+      <VStack spacing={5} marginBottom='3em' marginTop='1em'>
         <Text fontWeight='bold' fontSize={{base:'24px', md:'28px', lg:'36px'}}>Contact</Text>
-        <Text textAlign='center' width={{base:'85%', md:'50%', lg:'50%'}}>I&apos;d love to connect with peer investors. Feel free to reach out.</Text>
+        <Text textAlign='center' width={{base:'85%', md:'50%', lg:'50%'}} lineHeight={1.8}>I&apos;d love to connect with peer investors. Feel free to reach out.</Text>
         <Button w={{base:'60%', md:'40%', lg:'40%'}}><a href='mailto:kyungmkoo13@gmail.com' target='_blank' rel="noreferrer">Say Hello</a></Button>
       </VStack>
 
