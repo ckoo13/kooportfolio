@@ -5,16 +5,16 @@ import useEmblaCarousel from "embla-carousel-react";
 import Navbar from "../components/Navbar";
 import Emoji from "../components/Emoji";
 
-import { Box, Flex, Image, Text, Stack, Heading, Divider, useColorModeValue } from "@chakra-ui/react";
-import { Card, CardBody } from '@chakra-ui/react'
+import { Box, Flex, Image, Text, Stack, Heading, Divider, Button } from "@chakra-ui/react";
+import { Card, CardBody } from '@chakra-ui/react';
 import { Spinner } from "@chakra-ui/react";
+import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, useDisclosure } from "@chakra-ui/react";
 
 
 export default function About() {
     const [tracks, setTracks] = useState([]);
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-
-    const watchingBg = useColorModeValue('gray.50', 'whiteAlpha.100');
+    const { isOpen, onOpen, onClose } = useDisclosure();
 
     useEffect(() => {
         fetchTopTracks();
@@ -59,25 +59,34 @@ export default function About() {
                 <Image flexShrink={0} borderRadius='12px' marginBottom={{base:'4', md:'0', lg:'0'}} boxSize={{base: '220px', md:'250px', lg:'280px'}} objectFit="cover" src="/about2.JPG" alt="Calvin Koo"></Image>
 
                 <Box width={{base:'90%', md:'55%', lg:'55%'}}>
-                    <Stack spacing={3} textAlign='left'>
+                    <Stack spacing={4} textAlign='left'>
                         <Text fontFamily='Gotham' fontWeight='bold' fontSize={{base: '24px', md:'24px', lg:'32px'}}>Hi, my name is Calvin Koo!</Text>
                         <Text>I&apos;m a Private Equity investor at Sunstone Partners in San Mateo, where I focus on growth equity investments in tech-enabled services and software businesses. I graduated from Claremont McKenna College with a degree in Economics and Asian Studies.</Text>
                         <Text>I&apos;ve also completed a full-stack engineering bootcamp at App Academy, where I built applications in ReactJS and Ruby on Rails — which is how this site came to be. I&apos;m passionate about the intersection of technology, strategy, and business, and I write about what I&apos;m learning on Substack and Brunch Korea.</Text>
                         <Text>Feel free to reach out at kyungmkoo13@gmail.com — always happy to connect with fellow investors and builders.</Text>
+                        <Box>
+                            <Button size='sm' onClick={onOpen}>Currently Watching</Button>
+                        </Box>
                     </Stack>
                 </Box>
             </Flex>
 
-            {/* Currently Watching — full-width band */}
-            <Box width='100%' bg={watchingBg} paddingY={{base:'8', md:'10', lg:'12'}} paddingX={{base:'6', md:'16', lg:'24'}}>
-                <Heading size='md' marginBottom={5}>Currently Watching</Heading>
-                <Stack spacing={3} as='ul' styleType='disc' paddingLeft={5}>
-                    <Text as='li'>Patent cliffs and post-2022/23 launch slowdowns driving renewed focus on post-market pharma functions like pharmacovigilance and medical affairs</Text>
-                    <Text as='li'>Founder-built RCM and CDI businesses that have earned mission-critical status through strong organizational delivery, with a clear opportunity to layer in automation and AI to expand margins</Text>
-                    <Text as='li'>Accelerating technology adoption in financial services driving demand for digital and core banking advisory</Text>
-                    <Text as='li'>Korean and Asian technology markets</Text>
-                </Stack>
-            </Box>
+            {/* Currently Watching Modal */}
+            <Modal isOpen={isOpen} onClose={onClose} size={{base:'full', md:'lg', lg:'lg'}} isCentered>
+                <ModalOverlay backdropFilter='blur(4px)' />
+                <ModalContent>
+                    <ModalHeader>Currently Watching</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody paddingBottom={6}>
+                        <Stack spacing={4} as='ul' styleType='disc' paddingLeft={4}>
+                            <Text as='li'>Patent cliffs and post-2022/23 launch slowdowns driving renewed focus on post-market pharma functions like pharmacovigilance and medical affairs</Text>
+                            <Text as='li'>Founder-built RCM and CDI businesses that have earned mission-critical status through strong organizational delivery, with a clear opportunity to layer in automation and AI to expand margins</Text>
+                            <Text as='li'>Accelerating technology adoption in financial services driving demand for digital and core banking advisory</Text>
+                            <Text as='li'>Korean and Asian technology markets</Text>
+                        </Stack>
+                    </ModalBody>
+                </ModalContent>
+            </Modal>
 
             <Divider />
 
