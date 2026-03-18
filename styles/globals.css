@@ -1,5 +1,26 @@
 @import url(typinganimation.css);
 
+/* Embla Carousel */
+.embla {
+  width: 100%;
+  max-width: 320px;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
 /* Adding Fonts */
 
 @font-face {

@@ -31,23 +31,25 @@ export default function About() {
             return <Spinner marginY='20px' />;
         }
         return (
-            <Box className="embla" overflow='hidden' maxWidth={{base: '85%', md:'40%', lg:'25%'}}>
-                <Box className="embla__viewport" ref={emblaRef}>
-                    <Box className="embla__container" display='flex' alignItems='center'>
+            <div className="embla">
+                <div className="embla__viewport" ref={emblaRef}>
+                    <div className="embla__container">
                         {tracks.map((track, i) => (
-                            <Card textAlign='center' key={i} maxW='sm' className="embla__slide" minWidth='0' flex='0 0 100%' marginX='20px' alignItems='center'>
-                                <CardBody>
-                                    <Stack alignItems='center'>
-                                        <Image width={{base:'80px', md:'100px', lg:'100px'}} src={track.image} alt='album image'></Image>
-                                        <Text fontWeight='bold' fontSize='sm'>{track.title}</Text>
-                                        <Text fontSize='xs'>{track.artist}</Text>
-                                    </Stack>
-                                </CardBody>
-                            </Card>
+                            <div className="embla__slide" key={i}>
+                                <Card textAlign='center' alignItems='center'>
+                                    <CardBody>
+                                        <Stack alignItems='center'>
+                                            <Image width='90px' src={track.image} alt='album image' />
+                                            <Text fontWeight='bold' fontSize='sm'>{track.title}</Text>
+                                            <Text fontSize='xs'>{track.artist}</Text>
+                                        </Stack>
+                                    </CardBody>
+                                </Card>
+                            </div>
                         ))}
-                    </Box>
-                </Box>
-            </Box>
+                    </div>
+                </div>
+            </div>
         );
     }
 
