@@ -40,8 +40,8 @@ export default function PortfolioItem({project}) {
                 <Text>{description}</Text>
                 {/* need to add on click event for view project button */}
     
-                <Button w={{base:'70%', md:'40%', lg:'40%'}}><a href={liveLink} target='_blank' rel="noreferrer">Live Link</a></Button>
-                <Button w={{base:'70%', md:'40%', lg:'40%'}}><a href={githubLink} target='_blank' rel="noreferrer">Github Repo</a></Button>
+                <Button as='a' href={liveLink} target='_blank' rel='noreferrer' w={{base:'70%', md:'40%', lg:'40%'}}>Live Link</Button>
+                <Button as='a' href={githubLink} target='_blank' rel='noreferrer' w={{base:'70%', md:'40%', lg:'40%'}}>Github Repo</Button>
             </Flex>
             
             
