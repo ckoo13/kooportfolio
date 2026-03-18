@@ -16,8 +16,8 @@ const TypedText = () => {
             strings: [
                 'I am Calvin Koo',
                 'I am a Private Equity investor',
-                'I am a soccer fanatic',
-                'I am happy you are here!'
+                'I am a Dodger fan',
+                'I am a 15 handicap',
             ],
             typeSpeed: 70,
             backSpeed: 30,
