@@ -37,7 +37,7 @@ const TypedText = () => {
 
         return (
             <Box fontFamily='Gotham' fontWeight='bold' fontSize={{base: '24px', md:'24px', lg:'32px'}} marginX={{base:'0', md:'20', lg:'40'}} className="wrap">
-                <Text className='animation-text'>Welcome <Emoji symbol="👋"/></Text>
+                <Text className='animation-text'>Hi <Emoji symbol="👋"/></Text>
                 <div className="type-wrap">
                     <span style={{ whiteSpace: 'pre' }} ref={el} />
                 </div>
