@@ -7,11 +7,39 @@ import Emoji from '../components/Emoji';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-import { Flex, Link, Text, VStack, HStack, Button, Card, CardBody, Heading } from '@chakra-ui/react';
+import { Flex, Link, Text, VStack, HStack, Button, Card, CardBody, Heading, Wrap, WrapItem } from '@chakra-ui/react';
 
 
 
 export default function Home() {
+
+  const focusAreas = [
+    {
+      title: 'Healthcare IT',
+      subtitle: 'Provider & Payer Services',
+      description: 'Tech-enabled services businesses supporting healthcare providers and payers — including revenue cycle management, clinical documentation improvement, healthcare credentialing, and value-based care enablement. Mission-critical, recurring-revenue businesses where outsourcing trends and automation tailwinds continue to drive growth.'
+    },
+    {
+      title: 'Pharma Services',
+      subtitle: null,
+      description: 'Pharmaceutical services businesses supporting post-market functions — pharmacovigilance, medical affairs, real-world data, and GxP compliance. Regulatory complexity and the need for specialized expertise drive persistent outsourcing demand from large and mid-size pharma alike.'
+    },
+    {
+      title: 'Digital Infrastructure',
+      subtitle: 'Data Center Services',
+      description: 'Businesses delivering colocation, managed services, and cloud-adjacent infrastructure — sectors defined by predictable recurring revenue, low churn, and strong secular tailwinds as organizations migrate away from legacy IT environments.'
+    },
+    {
+      title: 'Fintech',
+      subtitle: 'Digital Banking',
+      description: 'As financial institutions face mounting pressure to modernize, demand for technology advisory and implementation services continues to grow. We focus on firms enabling digital and core banking transformation for community banks and credit unions.'
+    },
+    {
+      title: 'Software & SaaS',
+      subtitle: null,
+      description: 'Vertical and horizontal software businesses with durable recurring revenue, strong retention, and defensible positions in B2B end markets. We look for companies with clear workflow ownership and the leverage to expand within their customer base over time.'
+    },
+  ];
 
   return (
     <Flex flexDirection='column' alignItems='center'>
@@ -33,9 +61,26 @@ export default function Home() {
         </Link>
       </HStack>
 
+      {/* Focus Areas Section */}
+      <Text fontWeight='bold' marginBottom={{base:'1em', md:'1em', lg:'2em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}}>Focus Areas</Text>
+      <Wrap spacing={6} justify='center' marginBottom={{base:'3em', md:'3em', lg:'4em'}} maxWidth={{base:'95%', md:'90%', lg:'85%'}}>
+        {focusAreas.map((area, i) => (
+          <WrapItem key={i}>
+            <Card width={{base:'280px', md:'280px', lg:'300px'}} textAlign='center' height='100%'>
+              <CardBody>
+                <VStack spacing={3} p={2}>
+                  <Heading size='sm'>{area.title}</Heading>
+                  {area.subtitle && <Text fontSize='xs' fontStyle='italic'>{area.subtitle}</Text>}
+                  <Text fontSize='sm'>{area.description}</Text>
+                </VStack>
+              </CardBody>
+            </Card>
+          </WrapItem>
+        ))}
+      </Wrap>
+
       {/* Writing Section */}
       <Text fontWeight='bold' marginBottom={{base:'1em', md:'1em', lg:'2em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}}>Writing <Emoji symbol="✍️"/></Text>
-
       <HStack spacing={6} marginBottom={{base:'3em', md:'3em', lg:'4em'}} alignItems='stretch' flexDirection={{base:'column', md:'row', lg:'row'}}>
         <Card maxW='sm' textAlign='center'>
           <CardBody>

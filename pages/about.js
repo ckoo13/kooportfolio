@@ -64,7 +64,7 @@ export default function About() {
             <Navbar />
 
             <Flex paddingY={{base:'10', md:'20', lg:'20'}} flexDirection={{base:'column', md:'row', lg:'row'}} alignItems='center' justifyContent='space-between' width='100%'>
-                <Image marginLeft={{base:'0', md:'10', lg:'20'}} borderRadius='12px' marginBottom={{base:'10', md:'0', lg:'0'}} boxSize={{base: '250px', md:'250px', lg:'300px'}} objectFit="cover" src="/about.jpg"></Image>
+                <Image marginLeft={{base:'0', md:'10', lg:'20'}} borderRadius='12px' marginBottom={{base:'10', md:'0', lg:'0'}} boxSize={{base: '250px', md:'250px', lg:'300px'}} objectFit="cover" src="/about 2.JPG"></Image>
 
                 <Box width={{base:'90%', md:'60%', lg:'60%'}} marginRight={{base:'0', md:'10', lg:'20'}}>
                     <Stack spacing={3} textAlign='left'>
@@ -76,8 +76,18 @@ export default function About() {
                 </Box>
             </Flex>
             
+            <Box width={{base:'90%', md:'70%', lg:'60%'}} marginTop={{base:'8', md:'10', lg:'12'}} marginBottom={{base:'6', md:'8', lg:'10'}}>
+                <Heading size='md' marginBottom={4}>Currently Watching</Heading>
+                <Stack spacing={2} as='ul' styleType='disc' paddingLeft={5}>
+                    <Text as='li'>Patent cliffs and post-2022/23 launch slowdowns driving renewed focus on post-market pharma functions like pharmacovigilance and medical affairs</Text>
+                    <Text as='li'>Founder-built RCM and CDI businesses that have earned mission-critical status through strong organizational delivery, with a clear opportunity to layer in automation and AI to expand margins</Text>
+                    <Text as='li'>Accelerating technology adoption in financial services driving demand for digital and core banking advisory</Text>
+                    <Text as='li'>Korean and Asian technology markets</Text>
+                </Stack>
+            </Box>
+
             <Text fontSize={{base:'2em', md:'2em', lg: '2em'}} ><Emoji symbol='👇' /></Text>
-            
+
             {buildCarousel()}
         </Flex>
     )
