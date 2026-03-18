@@ -15,7 +15,7 @@ const TypedText = () => {
         const options = {
             strings: [
                 'I am Calvin Koo',
-                'I am a strategy/CS/product specialist',
+                'I am a Private Equity investor',
                 'I am a soccer fanatic',
                 'I am happy you are here!'
             ],
