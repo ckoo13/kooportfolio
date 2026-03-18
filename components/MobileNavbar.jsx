@@ -41,7 +41,7 @@ export default function MobileNavbar() {
                             <Link href='/'>Home</Link>
                             <Link href='/playground'>Playground</Link>
                             <Link href='/about'>About</Link>
-                            <a href="/resume.pdf" target='_blank'>Resume</a>
+                            <Link href='/resume'>Resume</Link>
                         </VStack>
                     </DrawerBody>
                 </DrawerContent>
