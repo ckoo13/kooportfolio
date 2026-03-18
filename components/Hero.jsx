@@ -8,7 +8,7 @@ export default function Hero({props}) {
     
 
     return (
-        <Flex justifyContent='space-between' alignItems='center' marginY={{base:'0', md:'20', lg:'20'}} marginTop={{base:'10'}} flexDirection={{base: 'column', md:'row', lg:'row'}} >
+        <Flex justifyContent='space-between' alignItems='center' marginY={{base:'0', md:'10', lg:'12'}} marginTop={{base:'6'}} flexDirection={{base: 'column', md:'row', lg:'row'}} >
             <Box width={{base:'90%', md:'65%', lg:'65%'}} >
                 <TypedText />
 

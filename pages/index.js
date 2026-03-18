@@ -7,7 +7,7 @@ import Emoji from '../components/Emoji';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-import { Flex, Link, Text, VStack, HStack, Button, Card, CardBody, Heading, Wrap, WrapItem } from '@chakra-ui/react';
+import { Flex, Link, Text, VStack, HStack, Button, Card, CardBody, Heading, Wrap, WrapItem, Box, Divider } from '@chakra-ui/react';
 
 
 
@@ -52,7 +52,7 @@ export default function Home() {
       <Navbar />
       <Hero />
 
-      <HStack spacing={{base:'3', md:'3', lg:'5'}} marginBottom={{base:'10', md:'16', lg:'20'}} marginTop={{base:'0', md:'0', lg:'10'}}>
+      <HStack spacing={{base:'3', md:'3', lg:'5'}} marginBottom={{base:'6', md:'8', lg:'10'}} marginTop={{base:'0', md:'0', lg:'4'}}>
         <Link href="https://www.linkedin.com/in/calvin-koo-9aa869158/" target='_blank'>
           <LinkedInIcon sx={{ fontSize: "40px" }}></LinkedInIcon>
         </Link>
@@ -61,14 +61,46 @@ export default function Home() {
         </Link>
       </HStack>
 
+      {/* Writing Section */}
+      <Text fontWeight='bold' marginBottom={{base:'0.75em', md:'0.75em', lg:'1em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}}>Writing <Emoji symbol="✍️"/></Text>
+      <HStack spacing={6} marginBottom={{base:'2em', md:'2em', lg:'3em'}} alignItems='stretch' flexDirection={{base:'column', md:'row', lg:'row'}}>
+        <Card maxW='sm' textAlign='center'>
+          <CardBody>
+            <VStack spacing={3} p={2}>
+              <Box bg='#FF6719' borderRadius='6px' w='40px' h='40px' display='flex' alignItems='center' justifyContent='center'>
+                <Text color='white' fontWeight='black' fontSize='lg'>S</Text>
+              </Box>
+              <Heading size='sm'>Substack</Heading>
+              <Text fontSize='sm'>Thoughts on PE, technology, and markets.</Text>
+              <Button size='sm' w='60%'><a href='https://substack.com/@ckoo13/posts' target='_blank' rel="noreferrer">Read</a></Button>
+            </VStack>
+          </CardBody>
+        </Card>
+
+        <Card maxW='sm' textAlign='center'>
+          <CardBody>
+            <VStack spacing={3} p={2}>
+              <Box bg='#00C73C' borderRadius='6px' w='40px' h='40px' display='flex' alignItems='center' justifyContent='center'>
+                <Text color='white' fontWeight='black' fontSize='lg'>B</Text>
+              </Box>
+              <Heading size='sm'>Brunch Korea</Heading>
+              <Text fontSize='sm'>Korean-language content on tech and business.</Text>
+              <Button size='sm' w='60%'><a href='https://brunch.co.kr/@5af0036e44274b2' target='_blank' rel="noreferrer">Read</a></Button>
+            </VStack>
+          </CardBody>
+        </Card>
+      </HStack>
+
+      <Divider width={{base:'80%', md:'70%', lg:'60%'}} marginBottom={{base:'2em', md:'2em', lg:'3em'}} />
+
       {/* Focus Areas Section */}
-      <Text fontWeight='bold' marginBottom={{base:'1em', md:'1em', lg:'2em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}}>Focus Areas</Text>
-      <Wrap spacing={6} justify='center' marginBottom={{base:'3em', md:'3em', lg:'4em'}} maxWidth={{base:'95%', md:'90%', lg:'85%'}}>
+      <Text fontWeight='bold' marginBottom={{base:'0.75em', md:'0.75em', lg:'1em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}}>Focus Areas</Text>
+      <Wrap spacing={5} justify='center' marginBottom={{base:'2em', md:'2em', lg:'3em'}} maxWidth={{base:'95%', md:'90%', lg:'85%'}}>
         {focusAreas.map((area, i) => (
           <WrapItem key={i}>
             <Card width={{base:'280px', md:'280px', lg:'300px'}} textAlign='center' height='100%'>
               <CardBody>
-                <VStack spacing={3} p={2}>
+                <VStack spacing={2} p={1}>
                   <Heading size='sm'>{area.title}</Heading>
                   {area.subtitle && <Text fontSize='xs' fontStyle='italic'>{area.subtitle}</Text>}
                   <Text fontSize='sm'>{area.description}</Text>
@@ -79,33 +111,11 @@ export default function Home() {
         ))}
       </Wrap>
 
-      {/* Writing Section */}
-      <Text fontWeight='bold' marginBottom={{base:'1em', md:'1em', lg:'2em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}}>Writing <Emoji symbol="✍️"/></Text>
-      <HStack spacing={6} marginBottom={{base:'3em', md:'3em', lg:'4em'}} alignItems='stretch' flexDirection={{base:'column', md:'row', lg:'row'}}>
-        <Card maxW='sm' textAlign='center'>
-          <CardBody>
-            <VStack spacing={4} p={2}>
-              <Heading size='md'>Substack</Heading>
-              <Text fontSize='sm'>Thoughts on PE, technology, and markets.</Text>
-              <Button w='60%'><a href='https://substack.com/@ckoo13/posts' target='_blank' rel="noreferrer">Read</a></Button>
-            </VStack>
-          </CardBody>
-        </Card>
-
-        <Card maxW='sm' textAlign='center'>
-          <CardBody>
-            <VStack spacing={4} p={2}>
-              <Heading size='md'>Brunch Korea</Heading>
-              <Text fontSize='sm'>Korean-language content on tech and business.</Text>
-              <Button w='60%'><a href='https://brunch.co.kr/@5af0036e44274b2' target='_blank' rel="noreferrer">Read</a></Button>
-            </VStack>
-          </CardBody>
-        </Card>
-      </HStack>
+      <Divider width={{base:'80%', md:'70%', lg:'60%'}} marginBottom={{base:'1.5em', md:'1.5em', lg:'2em'}} />
 
       {/* Contact Section */}
       <VStack spacing={3} marginBottom='2em'>
-        <Text fontWeight='bold' marginTop={{base:'1em', md:'1em', lg:'2em'}} fontSize={{base:'24px', md:'28px', lg:'36px'}}>Contact</Text>
+        <Text fontWeight='bold' fontSize={{base:'24px', md:'28px', lg:'36px'}}>Contact</Text>
         <Text textAlign='center' width={{base:'85%', md:'50%', lg:'50%'}}>I&apos;d love to connect with peer investors. Feel free to reach out.</Text>
         <Button w={{base:'60%', md:'40%', lg:'40%'}}><a href='mailto:kyungmkoo13@gmail.com' target='_blank' rel="noreferrer">Say Hello</a></Button>
       </VStack>
