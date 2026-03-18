@@ -97,7 +97,6 @@ export default function About() {
                     <Text as='li' fontSize={{base:'14px', md:'15px', lg:'15px'}}>Patent cliffs and post-2022/23 launch slowdowns driving renewed focus on post-market pharma functions like pharmacovigilance and medical affairs</Text>
                     <Text as='li' fontSize={{base:'14px', md:'15px', lg:'15px'}}>Founder-built RCM and CDI businesses that have earned mission-critical status through strong organizational delivery, with a clear opportunity to layer in automation and AI to expand margins</Text>
                     <Text as='li' fontSize={{base:'14px', md:'15px', lg:'15px'}}>Accelerating technology adoption in financial services driving demand for digital and core banking advisory</Text>
-                    <Text as='li' fontSize={{base:'14px', md:'15px', lg:'15px'}}>Korean and Asian technology markets</Text>
                 </Stack>
             </Box>
 
