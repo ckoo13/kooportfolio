@@ -1,3 +1,12 @@
+export const KoreanTutor = {
+    title: 'Korean Tutor',
+    description: 'A personalized Korean language learning app for TOPIK 5-6 level learners, focused on PE/finance vocabulary, advanced grammar, and business Korean. I built this because I saw an opportunity to leverage AI to improve on business-level Korean — a skill I don\'t get to use as often in my day-to-day.',
+    projectType: 'AI Language Learning App',
+    githubLink: 'https://github.com/ckoo13/koreantutor',
+    liveLink: 'https://koreantutor.vercel.app',
+    lowerTitle: 'koreantutor'
+}
+
 export const TeeTimes = {
     title: 'TeeTimes',
     description: 'TeeTimes is a platform for finding and building local groups to get together for a round. This full stack web application will also let users easily keep track of their upcoming tee times and groups they are a part of.',

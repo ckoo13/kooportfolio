@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import PortfolioItem from "../components/PortfolioItem";
 import Emoji from "../components/Emoji";
 
-import { TeeTimes, Kooflix, VeloLaunch } from "../utils/portfolioitems";
+import { KoreanTutor, TeeTimes, Kooflix, VeloLaunch } from "../utils/portfolioitems";
 
 import { Flex, Text, VStack, Heading, Box, Card, CardBody, Stack, Image, Spinner, Divider } from "@chakra-ui/react";
 
@@ -76,6 +76,7 @@ export default function Playground() {
             </Text>
 
             <VStack spacing={16} marginBottom='4em' width='100%'>
+                <PortfolioItem project={KoreanTutor} />
                 <PortfolioItem project={TeeTimes} />
                 <PortfolioItem project={Kooflix} />
                 <PortfolioItem project={VeloLaunch} />
